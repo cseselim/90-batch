@@ -1,0 +1,221 @@
+body{
+	font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0px;
+	padding: 0px;
+}
+.site-title a{
+	color: #fff;
+}
+.site-title a:hover{
+	text-decoration: none;
+}
+.header-titles img{
+	width: 45%;
+}
+.primary-menu li a{
+	color: #fff !important;
+	text-transform: uppercase;
+	font-family: Josefin Sans,Arial,sans-serif;
+}
+#site-header {
+    background: transparent !important;
+    position: fixed !important;
+    width: 100%;
+}
+.slider_section{
+	background-position: 50% -100px;
+	background-size: cover;
+}
+.slider_content{
+	padding: 130px 0px;
+}
+.slider_content h3{
+	font-size: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    margin: 100px 0px 0px 0px;
+}
+.slider_content h1{
+	color: #dd9933;
+	font-size: 160px;
+	font-family: 'Montez', cursive;
+	font-weight: normal;
+	margin: 0px;
+}
+
+
+/*===============================event section======================*/
+
+.event_section{
+	color: #fff;
+    background-color: #1d1f27;
+    padding-bottom: 76px;
+}
+.event_title img{
+    text-align: center;
+    width: 134px;
+    margin: 0 auto;
+    padding: 38px 0px 0px 0px;
+}
+.event_title h1
+{
+	margin: 22px 0px;
+	font-size: 72px;
+    line-height: 1.1;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    font-family: Montez;
+}
+.event_title p{
+    font-size: 24px;
+    font-family: Josefin Sans,Arial,sans-serif;
+    font-weight: 300;
+    clear: both;
+    margin: 0;
+    letter-spacing: .01em;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+}
+.event_content{
+	background-color: rgba(255,255,255,.04);
+}
+.event_content img{
+	width: 100%;
+    max-width: none;
+    display: block;
+    margin: 0;
+    height: auto;
+}
+.event_content h3{
+    font-size: 27px;
+    line-height: 37px;
+    color: #fff;
+    font-family: Josefin Sans,Arial,sans-serif;
+    font-weight: 400;
+    margin: 17px 0px;
+}
+.event_content .event_icon i{
+    font-size: 48px;
+    color: #DD9933;
+    margin-top: 32px;
+}
+.event_content p{
+	font-family: Josefin Sans,Arial,sans-serif;
+    font-size: 18px;
+    padding: 0px 18px
+}
+.event_content ul{
+	list-style: none;
+    display: inline-block;
+    margin: 20px 0px 38px 0px;
+}
+.event_content ul li{
+	display: inline-block;
+}
+.event_content ul li a i{
+	border: 1px solid #dd9933;
+    color: #dd9933;
+    border-radius: 50%;
+    padding: 6px;
+}
+.event_content ul li a i:hover{
+	border: 1px solid #fff;
+	color: #dd9933;
+	color: #fff
+}
+
+/*===============================classment section======================*/
+
+.classment_section{
+	background-position: 100% center;
+	background-size: cover;
+	padding-bottom: 65px;
+}
+.classment_section .event_title h1{
+	color: #fff;
+}
+.classment_section .event_title p{
+	color: #fff;
+}
+.student_photo img{
+	height: 100%;
+    border-radius: 50%;
+    border: 7px solid #FFF;
+}
+.student_name h3{
+	font-family: Montez;
+    margin: 14px 0px 10px 0px;
+    color: #fff;
+}
+.student_name p{
+	font-size: 17px;
+    color: #fff;
+}
+.student_more{
+	display: block;
+    margin-top: 55px;
+}
+.student_more a{
+	font-size: 18px;
+    font-family: Josefin Sans,Arial,sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #ddd;
+    padding: 11px 33px;
+}
+.student_more a:hover{
+	border: 2px solid #fff;
+    background-color: #fff;
+    color: #4d6069;
+}
+
+/*===============================profie card section======================*/
+
+.prorile_card{
+	background-color: rgba(255,255,255,.04);
+	line-height: 34px;
+}
+.prorile_card > p{
+	font-family: Josefin Sans,Arial,sans-serif;
+    font-size: 18px;
+    padding: 0px 18px;
+    border-bottom: 1px solid #6e6b6b;
+    padding-bottom: 13px;
+    padding-top: 13px;
+}
+.prorile_card p i{
+	color: #dd9933;
+    font-size: 22px;
+    margin-right: 7px;
+    line-height: 34px;
+}
+.prorile_card h4{
+	font-family: Josefin Sans,Arial,sans-serif;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.school_name{
+	color: #dd9933;
+	font-family: Josefin Sans,Arial,sans-serif;
+	font-size: 18px;
+    font-weight: 500;
+}
+.card_img{
+	width: 85%;
+    border-radius: 50%;
+}
+.card_col_two{
+	padding: 19px 0px 0px 0px;
+}
+.card_content {
+    padding: 0px 0px 17px 19px;
+}
