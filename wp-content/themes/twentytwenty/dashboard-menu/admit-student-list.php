@@ -1,15 +1,8 @@
 <?php
     global $wpdb; 
 
-    $student_apply_table = $wpdb->prefix.'student_profiles';
-    $numRows = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE (class='Two' or class='Three' or class='Four' or class='Five' or class='Six') AND status='1'");
-    $today = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE date(created_at) = CURDATE() AND status='1'");
-    $one = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='one' AND status='1' AND approved_status='0' ");
-    $Two = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='Two' AND status='1'");
-    $Three = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='Three' AND status='1'");
-    $Four = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='Four' AND status='1'");
-    $Five = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='Five' AND status='1'");
-    $Six = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE class='Six' AND status='1'");
+    $student_apply_table = $wpdb->prefix.'memories';
+    $numRows = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE status='0'");
 
  ?>
 
@@ -19,56 +12,14 @@
     <div class="admission_table">
         <h2>Applied Students List</h2>
         <div class="row admission_row_one">
-            <div class="col-3">
+            <div class="col-12">
                 <div class="all_applicant">
                     <h3><?= $numRows; ?></h3>
-                    <h4>All Applicant's</h4>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="all_applicant tody_a">
-                    <h3><?= $today ?></h3>
-                    <h4>Today's Applicant's</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant bangla">
-                    <h3><?= $one ?></h3>
-                    <h4>One</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant bangla">
-                    <h3><?= $Two ?></h3>
-                    <h4>Two</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant evening">
-                    <h3><?= $Three ?></h3>
-                    <h4>Three</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant english">
-                    <h3><?= $Four ?></h3>
-                    <h4>Four</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant">
-                    <h3><?= $Five ?></h3>
-                    <h4>Five</h4>
-                </div>
-            </div>
-            <div class="col-3 mb-3">
-                <div class="all_applicant tody_a">
-                    <h3><?= $Six ?></h3>
-                    <h4>Six</h4>
+                    <h4>Total Memories</h4>
                 </div>
             </div>
         </div>
-        <div class="row admission_row_two">
+       <!--  <div class="row admission_row_two">
             <div class="col-3">
                 <div class="form-group">
                     <select class="form-control student_class" id="class" name="class">
@@ -81,14 +32,14 @@
                     </select>
                 </div>
             </div>
-            <!--<div class="col-3">
+            <div class="col-3">
                 <div class="form-group">
                     <select class="form-control" id="version" name="version">
                         <option value="">Medium</option>
                         <option value="english">English</option>
                     </select>
                 </div>
-            </div>-->
+            </div>
             <div class="col-2">
                 <div class="form-group">
                     <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Start Date">
@@ -102,21 +53,16 @@
             <div class="col-2 my-auto">
                 <button id="student_list_search" class="btn btn-success">Search</button>
             </div>
-        </div>
+        </div> -->
+
 
         <table id="all-applicant-list" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Srl</th>
-                    <th>Index No</th>
                     <th>Name</th>
-                    <!-- <th>Father Name</th>
-                    <th>Category</th> -->
-                    <!-- <th>Mother Name</th>
-                    <th>Phone</th> -->
-                    <th>Class</th>
-                    <th>Shift</th>
-                    <!-- <th>Category</th> -->
+                    <th>School Name</th>
+                    <th>Memories Text</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -125,14 +71,9 @@
             <tfoot>
                 <tr>
                     <th>Srl</th>
-                    <th>Index No</th>
                     <th>Name</th>
-                    <!-- <th>Father Name</th> -->
-                    <!-- <th>Category</th>
-                    <th>Mother Name</th>
-                    <th>Phone</th> -->
-                    <th>Class</th>
-                    <th>Shift</th>
+                    <th>School Name</th>
+                    <th>Memories Text</th>
                     <th>Actions</th>
                 </tr>
             </tfoot>

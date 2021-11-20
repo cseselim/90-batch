@@ -724,6 +724,11 @@ require get_template_directory() . '/formaction/forminsert.php';
 require get_template_directory() . '/dashboard-menu/dashboard-menu.php';
 
 /**
+ * dashboard custom menu resiter.
+ */
+require get_template_directory() . '/dashboard-menu/dashboard-css.php';
+
+/**
  * Get an array of elements.
  *
  * @since Twenty Twenty 1.0

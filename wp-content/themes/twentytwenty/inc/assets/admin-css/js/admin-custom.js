@@ -12,10 +12,10 @@ jQuery(document).ready(function() {
         },
         columns: [
             { data: 'srl' },
-            { data: 'index_no' },
             { data: 'student_name' },
+            { data: 'index_no' },
             /*{ data: 'father_name' },*/
-            { data: 'category' },
+            // { data: 'category' },
             /*{ data: 'mother_name' },
             { data: 'contact_no' },
             { data: 'class' },
@@ -25,20 +25,20 @@ jQuery(document).ready(function() {
     	 select: true,
     	 dom: 'Blfrtip',
     	 lengthMenu: [ [10, 25, 50, 100],
-    	 ['10 Applicants', '25 Applicants', '50 Applicants', '100 Applicants'] ],
+    	 ['10 User', '25 User', '50 User', '100 User'] ],
     	language: {
             "url": "datatables/italian.lang",
-            "sLengthMenu": "Applicant list _MENU_ ",
+            "sLengthMenu": "Resigter user list _MENU_ ",
             search: "_INPUT_",
             searchPlaceholder: "Search applicant",
-            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ applicant",
+            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ user",
         },
         buttons: {
             buttons: [
                 { 
                     extend: 'csv',
                     text: 'CSV',
-                    title : 'Applied Students List',
+                    title : 'Resigter User List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
                 { 
                     extend: 'excel',
                     text: 'Excel',
-                    title : 'Applied Students List',
+                    title : 'Resigter User List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -68,7 +68,7 @@ jQuery(document).ready(function() {
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    title : 'Applied Students List',
+                    title : 'Resigter User List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -161,34 +161,33 @@ jQuery(document).ready(function() {
             },
             columns: [
                 { data: 'srl' },
-                { data: 'index_no' },
                 { data: 'student_name' },
-                { data: 'father_name' },
-                { data: 'category' },
-                { data: 'mother_name' },
+                { data: 'index_no' },
+                /*{ data: 'father_name' },*/
+                // { data: 'category' },
+                /*{ data: 'mother_name' },
                 { data: 'contact_no' },
                 { data: 'class' },
-                { data: 'shift' },
-                /*{ data: 'category' },*/
+                { data: 'shift' },*/
                 { data: 'action' }
             ],
              select: true,
              dom: 'Blfrtip',
              lengthMenu: [ [10, 25, 50, 100],
-             ['10 Applicants', '25 Applicants', '50 Applicants', '100 Applicants'] ],
+             ['10 User', '25 User', '50 User', '100 User'] ],
             language: {
                 "url": "datatables/italian.lang",
-                "sLengthMenu": "Approved list _MENU_ ",
+                "sLengthMenu": "User list _MENU_ ",
                 search: "_INPUT_",
-                searchPlaceholder: "Search applicant",
-                "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ applicant",
+                searchPlaceholder: "Search User",
+                "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ User",
             },
             buttons: {
                 buttons: [
                     { 
                         extend: 'csv',
                         text: 'csv',
-                        title : 'All selected students',
+                        title : 'Resigter User List',
                         exportOptions : {
                             modifier : {
                                 // DataTables core
@@ -203,7 +202,7 @@ jQuery(document).ready(function() {
                     { 
                         extend: 'excel',
                         text: 'Excel',
-                        title : 'All selected students',
+                        title : 'Resigter User List',
                         exportOptions : {
                             modifier : {
                                 // DataTables core
@@ -218,7 +217,7 @@ jQuery(document).ready(function() {
                     {
                         extend: 'pdf',
                         text: 'PDF',
-                        title : 'Applied Students List',
+                        title : 'Resigter User List',
                         exportOptions : {
                             modifier : {
                                 // DataTables core
@@ -330,7 +329,7 @@ jQuery(document).ready(function() {
     });
 
 
-    var dataTable = admit_list('no');
+    var dataTable = admit_list();
     
     function admit_list(search_action, start_date='', end_date=''){
         var all_applicant_tbl = jQuery('#all-applicant-list').DataTable({
@@ -338,37 +337,32 @@ jQuery(document).ready(function() {
         ajax:{
          type:'POST',
          url : ajaxurl,
-         data : {action: "all_applicant_list",search_action: search_action, start_date: start_date, end_date: end_date},
+         data : {action: "all_memories"},
         },
         columns: [
             { data: 'srl' },
-            { data: 'index_no' },
+            { data: 'name' },
             { data: 'student_name' },
-            /*{ data: 'father_name' },
-            { data: 'category' },
-            { data: 'mother_name' },
-            { data: 'contact_no' },*/
-            { data: 'class' },
-            { data: 'shift' },
+            { data: 'm_text' },
             { data: 'action' }
         ],
        select: true,
        dom: 'Blfrtip',
        lengthMenu: [ [10, 25, 50, 100],
-       ['10 Applicants', '25 Applicants', '50 Applicants', '100 Applicants'] ],
+       ['10 Memories', '25 Memories', '50 Memories', '100 Memories'] ],
       language: {
             "url": "datatables/italian.lang",
-            "sLengthMenu": "Applicant list _MENU_ ",
+            "sLengthMenu": "Memories list _MENU_ ",
             search: "_INPUT_",
-            searchPlaceholder: "Search applicant",
-            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ applicant",
+            searchPlaceholder: "Search Memories",
+            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ memories",
         },
         buttons: {
             buttons: [
                 { 
                     extend: 'csv',
                     text: 'CSV',
-                    title : 'Applied Students List',
+                    title : 'Memories List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -383,7 +377,7 @@ jQuery(document).ready(function() {
                 { 
                     extend: 'excel',
                     text: 'Excel',
-                    title : 'Applied Students List',
+                    title : 'Memories List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -398,7 +392,7 @@ jQuery(document).ready(function() {
                 {
                     extend: 'pdf',
                     text: 'PDF',
-                    title : 'Applied Students List',
+                    title : 'Memories List',
                     exportOptions : {
                         modifier : {
                             // DataTables core
@@ -459,5 +453,24 @@ jQuery(document).ready(function() {
         var searchVal = jQuery(this).val()
         jQuery('#all-applicant-list').DataTable().columns( 7 ).search( searchVal ).draw();
     })
+
+
+
+    jQuery(document).on('click', '.m_approves', function(){
+        var student_id = jQuery(this).attr('id');
+        var confirms = confirm("Are you want to approve this memories?");
+       if (confirms) {
+        jQuery.ajax({
+        type: 'POST',
+        url : ajaxurl,
+        data : {action: "memories_approve",student_id: student_id},
+        success: function(response) {
+            jQuery('#all-applicant-list').DataTable().destroy();
+            admit_list();
+        }
+      }) 
+    }
+    });
+
 
 });

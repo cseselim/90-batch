@@ -10,17 +10,17 @@
 
 	function admission_add_menu_page()
 	{
-		add_menu_page( 'Online Admission', "Admission", "edit_posts", 'student_list', 'admission_student_list', 'dashicons-welcome-learn-more', 110 );
+		add_menu_page( 'Online Admission', "Register User", "edit_posts", 'user_list', 'admission_student_list', 'dashicons-welcome-learn-more', 110 );
 		/*add_action('admin_init','custom_setting');*/
-		add_submenu_page( 'student_list', "selected-students", "Student list", 'edit_posts', 'student_list', 'admission_student_list', 110 );
+		add_submenu_page( 'user_list', "selected-students", "User list", 'edit_posts', 'user_list', 'admission_student_list', 110 );
 
-		add_submenu_page( 'student_list', "selected-students", "Approve students", 'edit_posts', 'selected_students', 'selected_students', 110 );
+		add_submenu_page( 'user_list', "selected-students", "Approve User", 'edit_posts', 'selected_students', 'selected_students', 110 );
 
-		add_submenu_page( 'student_list', "student_details", "", 'edit_posts', 'student-details', 'student_details', 110 );
+		// add_submenu_page( 'user_list', "student_details", "", 'edit_posts', 'student-details', 'student_details', 110 );
 
-		add_submenu_page( 'student_list', "Applicant-list", "Applicant List", 'edit_posts', 'applicant_list', 'admit_card_list', 110 );
+		add_submenu_page( 'user_list', "Applicant-list", "Memories List", 'edit_posts', 'memories_list', 'memories_list_function', 110 );
 
-		add_submenu_page( 'student_list', "studnet-documents", "Studnet document", 'edit_posts', 'studnet-document', 'student_documents', 110 );
+		add_submenu_page( 'user_list', "studnet-documents", "Approve Memories List", 'edit_posts', 'approve_memories', 'approve_memories_list', 110 );
 
 	}
 	add_action('admin_menu','admission_add_menu_page');
@@ -47,11 +47,11 @@
 	}
 
 	/*applicant list*/
-	function admit_card_list(){
+	function memories_list_function(){
 		require_once get_template_directory() . '/dashboard-menu/admit-student-list.php';
 	}
 
-	function student_documents(){
+	function approve_memories_list(){
 		require_once get_template_directory() . '/dashboard-menu/student-document.php';
 	}
  ?>
