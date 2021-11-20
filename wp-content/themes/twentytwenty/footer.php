@@ -12,7 +12,7 @@
  */
 
 ?>
-			<footer id="site-footer" role="contentinfo" class="header-footer-group">
+			<footer id="site-footer" role="contentinfo" class="header-footer-group" style="background-color: #1D1F27;border-top: 1px solid #ddd;padding: 24px 0px;">
 
 				<div class="section-inner">
 
@@ -25,19 +25,19 @@
 								_x( 'Y', 'copyright date format', 'twentytwenty' )
 							);
 							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+							<a style="color:#fff"; href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						</p><!-- .footer-copyright -->
 
 						<p class="powered-by-wordpress">
-							<a href="<?php echo esc_url( __( 'https://classtune.com/', 'twentytwenty' ) ); ?>">
+							<a style="color:#fff" href="<?php echo esc_url( __( 'https://classtune.com/', 'twentytwenty' ) ); ?>">
 								<?php _e( 'Powered by CLASSTUNE', 'twentytwenty' ); ?>
 							</a>
 						</p><!-- .powered-by-wordpress -->
 
 					</div><!-- .footer-credits -->
 
-					<a class="to-the-top" href="#site-header">
-						<span class="to-the-top-long">
+					<a class="to-the-top" href="#site-content">
+						<span class="to-the-top-long" style="color: #fff;">
 							<?php
 							/* translators: %s: HTML character for up arrow. */
 							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
@@ -69,7 +69,7 @@
 			    };
 
 			    function scrollFunction() {
-			        if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+			        if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {
 			            jQuery('.header-titles img').css('width', '35%');
 			            jQuery('#site-header').removeClass('bg-light');
 			            jQuery('#site-header').addClass('header_scroll');

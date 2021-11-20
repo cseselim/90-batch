@@ -197,6 +197,41 @@ get_header();
 	</div>
 </div>
 
+
+<div class="event_section" style="padding-bottom:70px;">
+	<div class="container-fluid">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<div class="event_title">
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/header-top.png')">
+					<h1>Gallery</h1>
+					<p>A class reunion is a meeting of former classmates, typically organized at or near their former school by one or a group of the class members on or around an anniversary of their graduation, e.g. 5 years later.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="27"]') ?>
+			</div>
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="44"]') ?>
+			</div>
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="45"]') ?>
+			</div>
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="46"]') ?>
+			</div>
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="47"]') ?>
+			</div>
+			<div class="col-3 p-0">
+					<?= do_shortcode('[foogallery id="27"]') ?>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="event_section">
 	<div class="container">
 		<div class="row text-center">
@@ -222,7 +257,7 @@ get_header();
 						<div class="col-md-3 col-sm-3 col-3">
 							<img class="card_img" src="<?php bloginfo('template_directory'); ?>/assets/images/test-1.jpg')">
 						</div>
-						<div class="col-md-9 col-sm-9 col-9 card_col_two">
+						<div class="col-md-9 col-sm-9 col-9 my-auto">
 							<h4>June ’89</h4>
 							<p class="school_name">Last school day</p>
 						</div>
@@ -238,7 +273,7 @@ get_header();
 						<div class="col-md-3 col-sm-3 col-3">
 							<img class="card_img" src="<?php bloginfo('template_directory'); ?>/assets/images/test-1.jpg')">
 						</div>
-						<div class="col-md-9 col-sm-9 col-9 card_col_two">
+						<div class="col-md-9 col-sm-9 col-9 my-auto">
 							<h4>June ’89</h4>
 							<p class="school_name">Last school day</p>
 						</div>
@@ -254,7 +289,7 @@ get_header();
 						<div class="col-md-3 col-sm-3 col-3">
 							<img class="card_img" src="<?php bloginfo('template_directory'); ?>/assets/images/test-1.jpg')">
 						</div>
-						<div class="col-md-9 col-sm-9 col-9 card_col_two">
+						<div class="col-md-9 col-sm-9 col-9 my-auto">
 							<h4>June ’89</h4>
 							<p class="school_name">Last school day</p>
 						</div>
@@ -270,7 +305,7 @@ get_header();
 						<div class="col-md-3 col-sm-3 col-3">
 							<img class="card_img" src="<?php bloginfo('template_directory'); ?>/assets/images/test-1.jpg')">
 						</div>
-						<div class="col-md-9 col-sm-9 col-9 card_col_two">
+						<div class="col-md-9 col-sm-9 col-9 my-auto">
 							<h4>June ’89</h4>
 							<p class="school_name">Last school day</p>
 						</div>
@@ -279,7 +314,6 @@ get_header();
 			</div><!---end-->
 		</div>
 	</div>
-
 </div>
 
 <!-- Modal -->
