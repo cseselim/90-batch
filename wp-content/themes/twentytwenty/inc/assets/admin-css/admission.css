@@ -1,0 +1,320 @@
+.admission_row_one{
+	margin-bottom: 50px;
+}
+.all_applicant{
+	text-align: center;
+	padding: 14px 0px;
+	border-radius: 5px;
+	box-shadow: 1px 5px 12px #c8c6c6;
+}
+.all_applicant h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px !important;
+    margin-bottom: 10px !important;
+    font-weight: 700 !important;
+    color: #3DC77A !important;
+}
+.all_applicant h4{
+    font-family: 'Roboto', sans-serif;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	color: #000 !important;
+}
+.tody_a h3{
+    color: #FFAB03 !important;
+}
+.bangla h3{
+	color: #FF9895 !important;
+}
+.eveing h3{
+	color: #01AAFE !important;
+}
+.english h3{
+	color: #BF00FF !important;
+}
+.admission_row_two{
+    margin-bottom: 30px;
+}
+.admission_table select{
+    background: url(images/dropdown.png) no-repeat right white;
+    background-position-x: 98%;
+    background-position-y: 13px;
+}
+#example, #approve_students, #all-applicant-list_wrapper{
+ margin-top:20px;   
+}
+#example_length label,#approve_students_length label, #all-applicant-list_wrapper label{
+    font-size: 20px;
+    font-weight: 600;
+}
+#example_filter, #approve_students_filter{
+    margin-top: 30px;
+    margin-right: 8px;
+}
+#example_filter label, #approve_students_filter label{
+    text-align:left;
+}
+#example_filter label input, #approve_students_filter label input{
+    font-size: 15px;
+    font-weight: 500;   
+}
+.admission_table {
+    margin: 18px 0px 0px 0px;
+}
+.admission_table h2{
+	text-align: center;
+	font-size: 30px;
+	text-transform: capitalize;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+.dt-buttons{
+    margin-top: 38px;
+    margin-left: 50px;
+    float: inherit;
+}
+#all-applicant-list_wrapper .dt-buttons{
+    margin-top: 38px;
+    margin-left: 50px;
+    float: inherit;
+}
+.buttons-csv{
+	padding: 0px 20px 4px 20px;
+    height: 36px;
+    background: transparent;
+    color: #01AAFE;
+    border-color: #ddd;
+    font-weight: 600;
+}
+.buttons-excel {
+	padding: 0px 20px 4px 20px;
+    color: #FF9895;
+    background-color: transparent;
+    border-color: #ddd;
+    height: 36px;
+    font-weight: 600;
+}
+.buttons-pdf {
+	padding: 0px 20px 4px 20px;
+    color: #FFAB03;;
+    background-color: transparent;
+    border-color: #ddd;
+    height: 36px;
+    font-weight: 600;
+}
+.buttons-print {
+	padding: 0px 20px 4px 20px;
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    height: 37px;
+}
+.admission_table thead,.admission_table tfoot{
+	/*background-color: #6c757d;*/
+}
+.admission_table #example_length select, #all-applicant-list_wrapper select, .admission_table #example_filter input, #all-applicant-list_wrapper input{
+	border:1px solid #ddd;
+	height: 36px;
+	margin-top: 8px;
+}
+.admission_table #approve_students_length select,.admission_table #approve_students_filter input{
+	border:1px solid #ddd;
+	height: 36px;
+	margin-top: 8px;
+}
+.admission_table thead th,.admission_table tfoot th{
+	border-bottom: 1px solid #ddd !important;
+	border-top: 1px solid #ddd !important;
+	border-left: 1px solid #ddd !important;
+	text-align: center;
+	background: #f2f2f2;
+}
+.admission_table thead th:last-child,.admission_table tfoot th:last-child{
+	border-right: 1px solid #ddd;
+}
+.admission_table thead tr th,.admission_table tfoot tr th{
+	font-size: 13px;
+}
+.admission_table tr td{
+	font-size: 13px;
+	border-left: 1px solid #ddd !important;
+	text-align: center;
+}
+.admission_table table.dataTable.display tbody tr.odd > .sorting_1, .admission_table table.dataTable.order-column.stripe .admission_table tbody tr.odd > .sorting_1 {
+    background-color: transparent;
+}
+
+.admission_table .approves, .admission_table .unapproves{
+	border: none;
+	background: #3AC87A;
+	color: #fff;
+	padding: 0px 5px 2px 5px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.single_view{
+	background: #FFEDC8;
+	color: #000;
+	padding: 1px 8px 4px 8px;
+	border-radius: 4px;
+}
+.single_view:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.admission_table tr td:last-child{
+	border-right: 1px solid #ddd !important;
+}
+.admission_table table.dataTable thead th,.admission_table table.dataTable thead td,
+.admission_table table.dataTable tfoot th {
+    padding: 10px 10px;
+}
+.admission_table .dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 1px 1px 1px 2px;
+}
+.admission_table .form-group{
+    margin-bottom: 0px;
+}
+.admission_table .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.admission_table .form-group input,.admission_table .form-group select{
+	border:1px solid #ddd;
+	padding: 0px 0px 5px 9px;
+}
+.student_details{
+	margin-top: 32px;
+}
+.student_img img{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+.student_content{
+	padding: 0px 0px 8px 0px;
+	margin-bottom: 8px;
+}
+.student_details h1{
+	font-size: 35px;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+.ad_class{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+.ad_class strong{
+    color: #3AC87A;
+}
+.ad_label{
+    margin: 0px;
+    font-size: 14px;
+    color: #757272;
+    font-weight: 700
+}
+.student_content p{
+	margin: 0px;
+	font-size: 15px;
+}
+.student_content p strong{
+	margin-right: 8px;
+}
+.student_details_button button{
+	padding: 6px 45px 10px 45px;
+    margin-top: 38px;
+    background: #46C056;
+    border: #46C056;
+    margin-left: -192px;
+}
+#search_by_date{
+    padding: 4px 25px 7px 19px;
+}
+#approve_stu_search_by_date{
+    padding: 4px 25px 7px 19px;
+}
+.start_date1{
+    top: 174px !important;
+}
+.start_date{
+    top: 610.8px !important;
+}
+
+@media (max-width: 430px){
+	.admission_row_one .col{
+		-webkit-box-flex: 0;
+  		-ms-flex: 0 0 25%;
+    	flex: none;
+    	max-width: 100%;
+	}
+	.admission_row_two .col-2{
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 16.666667%;
+	    flex: none;
+	    max-width: 100%;
+	    text-align: center;
+    	margin-bottom: 22px;
+	}
+	.admission_row_two .col-3{
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 16.666667%;
+	    flex: none;
+	    max-width: 100%;
+	    text-align: center;
+    	margin-bottom: 22px;
+	}
+	.excel_row{
+		text-align: center;
+    	margin-top: 33px;
+	}
+	.excel_row .col-12{
+		margin-bottom: 15px;
+	}
+	.select_s_row .col-2{
+		-webkit-box-flex: 0;
+	    -ms-flex: 0 0 16.666667%;
+	    flex: none;
+	    max-width: 100%;
+	    text-align: center;
+    	margin-bottom: 22px;
+	}
+	.student_img{
+		text-align: center;
+	}
+}
+
+
+@media (max-width: 575px) and (min-width: 431px){
+	.admission_row_one .col{
+		-webkit-box-flex: 0;
+  		-ms-flex: 0 0 25%;
+    	flex: none;
+    	max-width: 50%;
+	}
+	.admission_row_two .col-2{
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 16.666667%;
+	    flex: none;
+	    max-width: 100%;
+	    text-align: center;
+    	margin-bottom: 22px;
+	}
+	.select_s_row .col-2{
+		-webkit-box-flex: 0;
+	    -ms-flex: 0 0 16.666667%;
+	    flex: none;
+	    max-width: 100%;
+	    text-align: center;
+    	margin-bottom: 22px;
+	}
+	.excel_row{
+		text-align: center;
+    	margin-top: 33px;
+	}
+	.excel_row .col-12{
+		margin-bottom: 15px;
+	}
+}

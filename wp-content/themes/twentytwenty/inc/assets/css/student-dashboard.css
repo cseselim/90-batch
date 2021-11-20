@@ -1,0 +1,451 @@
+@import url('https://fonts.maateen.me/adorsho-lipi/font.css');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.dashboard_header_c{
+    box-shadow: 0px 4px 44px 0px rgba(0,0,0,0.14);
+    padding: 10px 0px;
+}
+.dashboard_header a{
+    text-decoration: none;
+}
+.dasb_logo{
+    width: 16%;
+}
+.dasb_logo img{
+    width: 100%;
+}
+.dasb_logout a{
+    float: right;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.4s;
+}
+.active a{
+    color: #46C056;
+}
+.dashboard_header_c .navbar ul li a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    -moz-transition: .3s;
+    color: #29363B;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-right: 1px solid #eae5e5;
+}
+.dashboard_header_c .navbar ul li:last-child a{
+    border-right:none;
+}
+.dashboard_header_c .navbar-light .navbar-nav .nav-link {
+    color: #353535;
+}
+.dashboard_header_c .navbar-light .navbar-nav .nav-link:hover {
+    color: #46C056;
+}
+.dashboard_header_c .form-inline .dropdown .dropdown-menu .dropdown-item:hover {
+    color: #46C056 !important;
+}
+
+.dashboard_header_c .form-inline li{
+ list-style:none;   
+}
+.dashboard_header_c .form-inline li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+     color: #29363B;
+     font-weight: 400;
+}
+.dashboard_header_c .form-inline li a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;   
+}
+.site_row_one{
+    margin: 18px 0px;
+    min-height: 450px;
+}
+.admit-card-area{
+    border: 1px solid #ddd;
+}
+.student_content{
+    text-align:center;
+    background: #13c4a1;
+    margin: 2px;
+}
+.student_content h1{
+    margin: 0px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.student_content p{
+    padding: 1px 0px 15px 0px;
+    margin: 0px;
+    color: #09f409;
+    font-weight: 500;
+}
+.student_content img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.student_content ul{
+    margin: 10px 0px 0px 0px;
+    padding: 0px 0px 15px 0px;
+    list-style: none;
+}
+.student_content ul li a{
+    font-size: 15px;
+    color: #fff;
+}
+.admit_menu_area{
+    border: 1px solid #ddd;
+    margin-top: 30px;
+}
+.admit-menu{
+    padding: 30px 30px 30px 30px;
+}
+.admit-menu ul li{
+    line-height: 35px;
+}
+.admit-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.admit-menu ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 8px 0px;
+    transition: .4s;
+    color: #000;
+}
+.admit-menu ul li a i{
+    margin-right: 8px;
+    color: #13c4a1;
+}
+
+.admitcard h1{
+    font-size: 35px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.admitcard table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.admitcard th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.admitcard td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+.admitcard td i{
+    color: #079907;
+    font-size: 20px;
+    margin-left: 9px;
+    transition: .6s;
+}
+.admitcard td i:hover{
+    color: #C62530;
+    cursor:pointer;
+}
+/* admit login css start*/
+.admit_form_area{
+    width: 380px;
+    margin: 10px auto 17px auto;
+    background: #dddd;
+    padding: 20px 26px 7px 26px;
+}
+.admit_form_area h4{
+    text-align: center;
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 19px;
+}
+#submit{
+    width: 95px;
+    margin-top: 8px;
+}
+
+.d_footer_c{
+    background-color: #28a745;
+    padding: 10px 0px;
+}
+.d_footer_c p{
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #fff;
+}
+.d_footer_c p a{
+    color: #851B88;;
+}
+.dash_home_content{
+    margin-bottom: 30px;
+}
+.dash_home_content:last-child{
+    margin-bottom: 0px;
+}
+.rules_modal h5{
+    font-size: 28px;
+    font-weight: bold;
+}
+.dash_home_content h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 1.3em;
+    background-color: #A8E3D8;
+    padding: 14px 13px;
+}
+.dash_home_content  ul li{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #636b6f;
+    list-style: none;
+}
+
+/*====applicant form css========*/
+.applicant_form{
+    border: 1px solid #ddd;
+}
+.applicant_form_area{
+    padding: 0px 15px 15px 15px;
+}
+.applicant_form h2{
+    border: 1px solid #ddd;
+    padding: 14px 18px 14px 14px;
+    box-shadow: 3px 4px 6px #ddd;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-size: 24px;
+    font-family: 'Raleway';
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0px 0px 22px 0px;
+}
+.applicant_form_area label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #636b6f;
+    font-weight: 600;
+}
+.applicant_form_area label span{
+    font-size: 22px;
+    line-height: 0;
+    color: red;
+}
+.applicant_form_area h4{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+.applicant_form_area input,.applicant_form_area select,.applicant_form_area textarea{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+.applicant_form_area .form-group {
+    margin-bottom: 10px;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #b7babd;
+}
+.applicant_form_area .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b7babd !important;
+  opacity: 1; /* Firefox */
+}
+.gj-textbox-md {
+    border: 1px solid #ccc;
+}
+.gj-datepicker-md [role="right-icon"] {
+    top: 7px;
+}
+.form_break{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*==========applicant profile css======*/
+.profile_row_one{
+    padding: 14px 14px 14px 14px;
+    box-shadow: 0px 6px 10px #d7d2d2;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.pro_title h2{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #353535;
+}
+.pro_title p{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+.pro_title a{
+    color: #43C564;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.p_create_button button{
+    font-family: 'Roboto', sans-serif;
+    padding: 34px 40px;
+    font-size: 15px;
+    float: right;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(60,212,133,1) 0%, rgba(73,187,75,1) 100%);
+}
+.p_create_button button .fa-plus{
+    margin-right: 10px;
+}
+.profile_row_two h4{
+    position:relative;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #353535;
+}
+.profile_row_two h4:after{
+    content: "";
+    background: #3A87A;
+    width: 106px;
+    height: 4px;
+    position: absolute;
+    bottom: -10px;
+    right: calc(50% - 56px);
+}
+.profile_table{
+    margin-top: 20px;
+}
+
+.profile_table table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #ddd;
+    text-align: center;
+    color: #353535;
+}
+.profile_table table thead > tr{
+    border-bottom: 0px solid #ddd;
+}
+.profile_table table tr{
+    border-bottom: 1px solid #ddd;
+}
+.profile_table table tr:last-child{
+     border-bottom: 0px solid #ddd;
+}
+.profile_table table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px solid #ddd;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 25px;
+    color: #353535;
+}
+.profile_table table  tbody  tr  td strong{
+    font-weight: 500;
+    color: #B5B5B5;
+    margin-right: 10px; 
+}
+
+.apply_b{
+    width: 173px !important;
+    border: none;
+	border-radius: 5px !important;
+	margin-bottom: 10px;
+    padding: 8px 0px;
+    background: linear-gradient(180deg, rgba(60,212,133,1) 0%, rgba(73,187,75,1) 100%);
+}
+.pro_edit{
+    background: #ECECEC;
+    border: none;
+    color: #FFAA00;
+    padding: 8px 0px;
+}
+.pro_delete{
+    background: #F5F8FA;
+    color: #FF5E5E;
+    border:none;
+    padding: 8px 0px;
+    margin-bottom: 10px;
+}
+.application-done{
+    text-align: center;
+    margin-top: calc(50% - 375px);
+}
+.application-done h2{
+    font-size: 25px;
+    font-family: 'Raleway';
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0px;
+}
+.application-done > h2{
+    border-bottom: 2px solid #000;   
+}
+/*error message css*/
+.help-block{
+    display: block;
+}
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.has-error .form-control:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;
+}
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: #a94442;
+}
+.has-success .form-control {
+    border-color: #3c763d;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.has-success .form-control:focus {
+    border-color: #2b542c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168;
+}
+.loader{
+    width: 40%;
+    margin-left: calc(50% - 21%);
+}
+#extra_subject option{
+    margin-bottom: 6px;
+}

@@ -204,7 +204,11 @@ get_header();
 				<div class="event_title">
 					<img src="<?php bloginfo('template_directory'); ?>/assets/images/header-top.png')">
 					<h1>Memories</h1>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p style="margin-bottom: 27px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-primary add_memories" data-toggle="modal" data-target="#exampleModal">
+					  Add Memories
+					</button>
 				</div>
 			</div>
 		</div>
@@ -275,9 +279,65 @@ get_header();
 			</div><!---end-->
 		</div>
 	</div>
+
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="margin: 0px;">Add Memories</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form id="applicant_form" enctype="multipart/form-data" autocomplete="off">
+  				<div id="wpmp-reg-loader-info" class="wpmp-loader" style="text-align: center;margin-bottom: 17px; display: none;">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/ajax-loader.gif"/>
+                    <span>Please wait ...</span>
+                </div>
+                <div id="wpmp-register-alert" class="alert alert-danger" role="alert" style="display:none;"></div>
+                <div id="wpmp-mail-alert" class="alert alert-danger" role="alert" style="display:none;">
+          </div>
 
+          <div class="form-group row">
+          	<div class="col-md-12">
+          		<label for="inputSName" class="col-form-label" style="font-size: 15px;">name<span>*</span></label>
+          		<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+          	</div>
+					</div><!--field-->
+
+					<div class="form-group row">
+          	<div class="col-md-12">
+          		<label for="inputSName" class="col-form-label" style="font-size: 15px;">Memories<span>*</span></label>
+          		<textarea name="text" id="text" rows="2" style="height:66px"></textarea>
+          	</div>
+					</div><!--field-->
+
+					<div class="form-group row">
+          	<div class="col-md-12">
+          		<label for="inputSName" class="col-form-label" style="font-size: 15px;">School Name<span>*</span></label>
+          		<input type="text" class="form-control" id="school_name" name="school_name" placeholder="Name">
+          	</div>
+					</div><!--field-->
+
+					<div class="form-group row">
+          	<div class="col-md-12">
+          		<label for="inputSName" class="col-form-label" style="font-size: 15px;">Image<span>*</span></label>
+          		<input type="file" class="form-control" id="image" name="image">
+          	</div>
+					</div><!--field-->
+					<div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="submit" class="btn btn-primary" value="Add Memories">Add Memories</button>
+		      </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
 </main><!-- #site-content -->
 
 <?php //get_template_part( 'template-parts/footer-menus-widgets' ); ?>

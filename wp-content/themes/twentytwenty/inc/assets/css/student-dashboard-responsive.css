@@ -1,0 +1,97 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 430px) { 
+	.dasb_logo {
+        width: 50%;
+    }
+    .pro_title {
+        text-align: center;
+    }
+    .pro_title h2 {
+        font-size: 18px;
+    }
+	.dashboard_header_c .navbar-light .navbar-nav .nav-link {
+    	font-size: 21px;
+   	 	margin-top: 10px;
+   	 	margin-bottom: 4px;
+   		background: #ddd;
+   	 	padding: 7px 0px;
+	}
+    .p_create_button{
+        text-align:center;
+    }
+    .p_create_button button {
+        float: none;
+        margin-top: 15px;
+    }
+    .dash_home_content ul{
+        padding-left:0px;
+    }
+    .pro_fix_col{
+        min-width:350px;
+    }
+
+}
+
+@media (min-width: 431px) and (max-width: 575px) { 
+	.dasb_logo {
+        width: 50%;
+    }
+    .pro_title {
+        text-align: center;
+    }
+    .pro_title h2 {
+        font-size: 18px;
+    }
+    .p_create_button{
+        text-align:center;
+    }
+    .p_create_button button {
+        float: none;
+        margin-top: 15px;
+    }
+    .dash_home_content ul{
+        padding-left:0px;
+    }
+    .pro_fix_col{
+        min-width:350px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) { 
+	.dasb_logo {
+        width: 50%;
+    }
+    .pro_title {
+        text-align: center;
+    }
+    .p_create_button{
+        text-align:center;
+    }
+    .p_create_button button {
+        float: none;
+        margin-top: 15px;
+    }
+    .dash_home_content ul{
+        padding-left:0px;
+    }
+    .pro_fix_col{
+        min-width:350px;
+    }
+	
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}

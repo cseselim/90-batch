@@ -55,7 +55,244 @@
 
 			</footer><!-- #site-footer -->
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/formValidation.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/formfieldvalidation.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/bootstrap.formvalidation.min.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function () {
+			    window.onscroll = function () {
+			        scrollFunction()
+			    };
+
+			    function scrollFunction() {
+			        if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+			            jQuery('.header-titles img').css('width', '35%');
+			            jQuery('#site-header').removeClass('bg-light');
+			            jQuery('#site-header').addClass('header_scroll');
+			        } else {
+			            jQuery('.header-titles img').css('width', '');
+			            jQuery('#site-header').removeClass('header_scroll');
+			        }
+			    }
+			})
+			</script>
+
+		<script type="text/javascript">
+jQuery(document).ready(function() {
+		        
+
+jQuery('#memories_form').formValidation({
+
+      feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      },
+      fields: {
+        name: {
+          validators: {
+            notEmpty: {
+              message: "Name is required"
+            },
+          }
+        },
+        text: {
+          validators: {
+            notEmpty: {
+              message: "Memories is required"
+            },
+          }
+        },
+        school_name: {
+          validators: {
+            notEmpty: {
+              message: "School name is required"
+            },
+          }
+        },
+        image: {
+          validators: {
+            notEmpty: {
+              message: "Image is required"
+            },
+            file: {
+                extension: 'jpeg,jpg,png',
+                type: 'image/jpeg,image/png',
+                maxSize: 600000,   // 3MB
+                message: 'File size must be less than 500kb and file type will be jpg / jpeg /png'
+            }
+          }
+        },
+      }
+    })
+    .on('success.form.bv', function(e) {
+    	e.preventDefault();
+    	alert('ok');
+      // $('#wpmp-register-alert').hide();
+      //   $('#wpmp-mail-alert').hide();
+      //   // You can get the form instance
+      //   var $memories_form = $(e.target);
+      //   // and the FormValidation instance
+      //   var fv = $memories_form.data('formValidation');
+      //   var formData = new FormData();
+      //   // get all input and select item in a form
+      //   $('#memories_form input[type=text],#memories_form textarea,#memories_form date,#memories_form input[type=file]').each(function(i,item){
+      //       if(item.type == 'file'){
+      //           formData.append(item.name,item.files[0]);
+      //       }else {
+      //           formData.append(item.name,item.value);
+      //       }
+      //   })
+      //   formData.append('action','add_memories');
+      //   $('#wpmp-reg-loader-info').show();
+      //   $.ajax({
+      //       type:'POST',
+      //       url: "<?php echo admin_url('admin-ajax.php'); ?>",
+      //       data: formData,
+      //       contentType: false,
+      //       processData: false,
+      //       success: function(data) {
+      //       console.log(data);
+      //       $('#wpmp-reg-loader-info').hide();
+      //       // check login status
+      //       // if (true == data.reg_status) {
+      //       //     $('#wpmp-register-alert').removeClass('alert-danger');
+      //       //     $('#wpmp-register-alert').addClass('alert-success');
+      //       //     $('#wpmp-register-alert').show();
+      //       //     $('#wpmp-register-alert').html(data.success);
+      //       //     $('#applicant_form')[0].reset();
+      //       //     window.location.href = '<?= home_url() ?>/applicant-profile';
+
+      //       // } else {
+      //       //     $('#wpmp-register-alert').addClass('alert-danger');
+      //       //     $('#wpmp-register-alert').show();
+      //       //     $('#wpmp-register-alert').html(data.error);
+
+      //       // }
+      //   },
+      //   error: function(errors) {
+      //       console.log(errors);
+      //   }
+      //   })
+      //   // Prevent form submission
+    });
+
+
+		    })
+		</script>
+
+
+<script type="text/javascript">
+(function($) {
+    'use strict';
+    
+ $(document).ready(function() {
+    const af = $('#applicant_form').formValidation({
+        message: 'This value is not valid',
+        /*icon: {
+            required: 'glyphicon glyphicon-asterisk',
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },*/
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'Name is required'
+                    }
+                }
+            },
+            text: {
+                validators: {
+                    notEmpty: {
+                        message: 'Memories is required'
+                    }
+                }
+            },
+            school_name: {
+                validators: {
+                    notEmpty: {
+                        message: 'Name is required'
+                    }
+                }
+            },
+            image: {
+                validators: {
+                    notEmpty: {
+                        message: 'Profile image is required'
+                    },
+                    file: {
+                        extension: 'jpeg,jpg,png',
+                        type: 'image/jpeg,image/png',
+                        maxSize: 600000,   // 3MB
+                        message: 'File size must be less than 500kb and file type will be jpg / jpeg /png'
+                    }
+                }
+            },
+
+        }
+    }).on('success.form.fv', function(e) {
+        $('#wpmp-register-alert').hide();
+        $('#wpmp-mail-alert').hide();
+        // You can get the form instance
+        var $applicant_form = $(e.target);
+        // and the FormValidation instance
+        var fv = $applicant_form.data('formValidation');
+        var formData = new FormData();
+        // get all input and select item in a form
+        $('#applicant_form input[type=text],#applicant_form textarea,#applicant_form input[type=file]').each(function(i,item){
+            if(item.type == 'file'){
+                formData.append(item.name,item.files[0]);
+            }else {
+                formData.append(item.name,item.value);
+            }
+        })
+        formData.append('action','add_memories');
+        $('#wpmp-reg-loader-info').show();
+        $.ajax({
+            type:'POST',
+            url: "<?php echo admin_url('admin-ajax.php'); ?>",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(data) {
+            console.log(data);
+            $('#wpmp-reg-loader-info').hide();
+            // check login status
+            if (true == data.reg_status) {
+                $('#wpmp-register-alert').removeClass('alert-danger');
+                $('#wpmp-register-alert').addClass('alert-success');
+                $('#wpmp-register-alert').show();
+                $('#wpmp-register-alert').html(data.success);
+                $('#applicant_form')[0].reset();
+
+            } else {
+                $('#wpmp-register-alert').addClass('alert-danger');
+                $('#wpmp-register-alert').show();
+                $('#wpmp-register-alert').html(data.error);
+
+            }
+        },
+        error: function(errors) {
+            console.log(errors);
+        }
+        })
+        // Prevent form submission
+        e.preventDefault();
+    })
+
+ });
+
+})(jQuery);
+
+</script>
+
+
 		<?php wp_footer(); ?>
 	</body>
 </html>

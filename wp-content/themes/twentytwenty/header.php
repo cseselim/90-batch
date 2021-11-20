@@ -20,16 +20,24 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&family=Roboto:wght@300;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+		
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 		<link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
 		
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/formValidation.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard-responsive.css">
+		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/jquery-3.2.1.min.js"></script>
+		
+
 
 		<link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri()?>/assets/css/main.css">
-
 		<?php wp_head(); ?>
 
 	</head>
@@ -65,11 +73,11 @@
 						</button><!-- .search-toggle -->
 
 					<?php } ?>
-
-					<div class="header-titles">
-						<img src="<?= get_template_directory_uri()?>/assets/images/logo.png">
-					</div><!-- .header-titles -->
-
+					<a href="<?php echo home_url(); ?>">
+						<div class="header-titles">
+							<img src="<?= get_template_directory_uri()?>/assets/images/logo.png">
+						</div><!-- .header-titles -->
+					</a>
 					<button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
 						<span class="toggle-inner">
 							<span class="toggle-icon">

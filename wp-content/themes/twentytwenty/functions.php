@@ -713,6 +713,16 @@ function twentytwenty_get_customizer_color_vars() {
 	return $colors;
 }
 
+
+/**
+ * Student data insert by ajax request.
+ */
+require get_template_directory() . '/formaction/forminsert.php';
+/*
+ * dashboard custom menu resiter.
+ */
+require get_template_directory() . '/dashboard-menu/dashboard-menu.php';
+
 /**
  * Get an array of elements.
  *

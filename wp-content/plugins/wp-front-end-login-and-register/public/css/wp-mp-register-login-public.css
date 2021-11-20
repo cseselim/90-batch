@@ -1,0 +1,162 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+#wpmpRegisterForm .alert, #wpmpLoginForm .alert, #wpmpResetPasswordSection .alert{
+ font-size: 14px;
+}
+label {
+    font-weight: 600 !important;
+}
+.help-block{
+    color: red;
+}
+.wpmp-loader{
+ font-size: 12px;
+ padding: 10px 0;
+}
+.wpmp-loader img{
+ padding-right: 8px;
+}
+
+.wpmp-required-asterisk{
+    color: #ff0000;
+}
+div#wpmp-profile-loader-info img {
+    width: 45px;
+}
+.u_pro {
+    padding-top: 15px;
+    text-align: center;
+}
+.user_img2 {
+   
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 10px #00000063;
+}
+.user_bg_img {
+    
+    background-color: #fcfcfc;
+    margin-top: 0px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #00000063;
+    padding: 7px 15px;
+}
+#wpmpRegisterForm .form-control input{
+    border: 1px solid red !important;
+}
+.form-control {
+    width: 100%;
+    height: 35px;
+    font-size: 14px !important;
+}
+#wpmpRegisterForm{
+    width: 100%;
+    margin: 30px auto;
+}
+#wpmpRegisterForm label{
+    font-size: 19px;
+    color: #fff;
+}
+#wpmpLoginSection{
+    margin-bottom: 26px;
+}
+.login-from{
+     margin-left: 25%;
+}
+#wpmp_districtautocomplete-list div, #wpmp_schoolautocomplete-list div{
+    border: 1px solid #ddd;
+    padding: 4px 6px;
+}
+#wpmp_districtautocomplete-list div:hover{
+    cursor:pointer;
+}
+#wpmp_schoolautocomplete-list div:hover{
+    cursor:pointer;
+}
+.p_profile{
+    margin-top: 48px;
+    margin-bottom: 40px;
+    display: table;
+    width: 100%;
+}
+.ttl_name1, .ttl_name {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.ttl_name i{
+    font-size: 17px;
+    margin-right: 8px;
+}
+.p_position{
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.p_position h4 {
+    font-size: 16px;
+    background: #3D3C3C;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    font-weight: 600;
+    margin:0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.p_position h3 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0px;
+    color: #FFB228;
+    padding: 5px 0px;
+}
+.p_division{
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    margin:0px;
+    padding: 4px 0px;
+}
+.p_logout{
+    border-top: 1px solid #ddd;
+    display: block;
+    margin-top: 14px;
+    padding-top: 12px;
+}
+#login_button, #primary_one{
+    background: #ff731c;
+    padding: 9px 16px;
+}
+#btnForgotPassword, #btnReturnToLogin {
+    padding: 9px 16px;
+    font-size: 14px;
+    background: #000;
+}
+.select2-container .select2-selection--single {
+    height: 35px !important;
+    border: 1px solid #ccc !important;
+    color: #555 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 33px !important;
+    font-size: 14px !important;
+    padding-left: 16px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-top: 2px !important;
+    color: #000 !important;
+}
+.hidden{
+    display:none;
+}

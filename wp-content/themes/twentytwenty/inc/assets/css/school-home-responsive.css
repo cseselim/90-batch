@@ -1,0 +1,231 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 430px) { 
+    .classtune_logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .school_logo{
+        text-align:center;
+    }
+    .school_logo img {
+        width: 25%;
+        float: none;
+        margin-bottom: 10px;
+    }
+	
+    .school_slider .item h1 {
+        font-size: 15px;
+        left: calc(50% - 116px);
+        bottom: calc(50% - -7px);
+    }
+    .school_slider .item h4 {
+        font-size: 14px;
+        left: calc(50% - 109px);
+    }
+    .application_process_area .row .col{
+        margin-bottom: 9px;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    .school_content{
+        text-align:center;
+        margin-bottom: 8px;
+    }
+    .school_slider img {
+        height: 155px;
+    }
+    .admission_rules ul {
+        padding-left: 0;
+    }
+    .admission_rules ul li {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .school_notice ul {
+        padding: 0px 5px;
+    }
+    .new_account a {
+        padding: 7px 45px;
+    }
+    .school_fee {
+        width: 100%;
+    }
+    #wpmpRegisterForm {
+        width: 94%;
+    }
+    .mobile_button{
+        display: block;
+    }
+    .admission_rules1 h1:after {
+        top: 63px;
+    }
+
+}
+
+@media (min-width: 431px) and (max-width: 575px) { 
+.classtune_logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .school_logo{
+        text-align:center;
+    }
+    .school_logo img {
+        width: 25%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .school_slider .item h1 {
+        font-size: 15px;
+        left: calc(50% - 116px);
+        bottom: calc(50% - -7px);
+    }
+    .school_slider .item h4 {
+        font-size: 14px;
+        left: calc(50% - 109px);
+    }
+    .application_process_area .row .col{
+        margin-bottom: 9px;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    .school_content{
+        text-align:center;
+        margin-bottom: 8px;
+    }
+    .school_slider img {
+        height: 155px;
+    }
+    .admission_rules ul {
+        padding-left: 0;
+    }
+    .admission_rules ul li {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .school_notice ul {
+        padding: 0px 5px;
+    }
+    .new_account a {
+        padding: 7px 45px;
+    }
+    .school_fee {
+        width: 75%;
+    }
+    #wpmpRegisterForm {
+        width: 94%;
+    }
+    .mobile_button{
+        display: block;
+    }
+    .admission_rules1 h1:after {
+        top: 63px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) { 
+	.classtune_logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .school_logo{
+        text-align:center;
+    }
+    .school_logo img {
+        width: 25%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .school_slider .item h1 {
+        font-size: 24px;
+        bottom: calc(50% - 0px);
+        left: calc(50% - 189px);
+    }
+    .school_slider .item h4 {
+        font-size: 23px;
+        left: calc(50% - 156px);
+    }
+    .application_process_area .row .col{
+        margin-bottom: 9px;
+        max-width: 33%;
+        flex-basis: 33%;
+    }
+    .school_content{
+        text-align:center;
+        margin-bottom: 8px;
+    }
+    .school_slider img {
+        height: 250px;
+    }
+    .admission_rules ul {
+        padding-left: 0;
+    }
+    .admission_rules ul li {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .school_notice ul {
+        padding: 0px 5px;
+    }
+    .new_account a {
+        padding: 7px 45px;
+    }
+	#wpmpRegisterForm {
+        width: 94%;
+    }
+	
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .school_slider .item h1 {
+        font-size: 24px;
+        bottom: calc(50% - 0px);
+        left: calc(50% - 189px);
+    }
+    .school_slider .item h4 {
+        font-size: 19px;
+        left: calc(50% - 146px);
+    }
+    .application_process_area .row .col{
+        margin-bottom: 9px;
+        max-width: 33%;
+        flex-basis: 33%;
+    }
+	.classtune_logo::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 113px;
+        right: 22px;
+        background-color: #f4eded;
+        top: -41px;
+    }
+	.new_account a {
+        padding: 7px 28px;
+    }
+    #wpmpRegisterForm {
+        width: 60%;
+    }
+	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .school_slider .item h1 {
+        left: calc(50% - 259px);
+        font-size: 32px;
+    }
+    .school_slider .item h4 {
+        left: calc(50% - 202px);
+    }
+	.new_account a {
+	    padding: 7px 50px;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}
