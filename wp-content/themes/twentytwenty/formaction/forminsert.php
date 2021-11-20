@@ -270,4 +270,57 @@
         }
     }
 
+
+
+    add_action( 'wp_ajax_all_unapprove_memories', 'all_unapprove_memories' );
+    add_action( 'wp_ajax_nopriv_all_unapprove_memories', 'all_unapprove_memories' );
+
+    function all_unapprove_memories(){
+
+    global $wpdb;
+    
+        $student_data = $wpdb->get_results(' 
+        SELECT stu_profile.id,stu_profile.name,stu_profile.school_name,stu_profile.m_text
+        FROM '. $wpdb->prefix.'memories AS stu_profile
+        WHERE stu_profile.status=1');   
+
+        $return_json = array();
+        $i = 0;
+        foreach ($student_data as $key => $value) { $i++;
+            $return_json[] = array(
+              'srl' => $i,    
+              'name' => $value->name,
+              'student_name' => $value->school_name,
+              'm_text' => $value->m_text,
+              'action' => '<button style="border: none;
+                background: #3AC87A;
+                color: #fff;
+                padding: 0px 5px 2px 5px;
+                border-radius: 4px;
+                cursor: pointer;" class="m_unapproves" id="'.$value->id.'">Unapprove</button>',
+            );
+        }
+        $response['data'] = $return_json;
+        wp_send_json($response);
+    }
+
+
+    add_action( 'wp_ajax_memories_unapprove', 'memories_unapprove' );
+    add_action( 'wp_ajax_nopriv_memories_unapprove', 'memories_unapprove' );
+
+    function memories_unapprove(){
+        $student_id = trim($_POST['student_id']);
+        global $wpdb;
+        $student_apply_table = $wpdb->prefix.'memories';
+        $result = $wpdb->update($student_apply_table, array('status' => '0'), array('id' => $student_id));
+        if($result){
+            // $student_user_id = $wpdb->get_row(' 
+            // SELECT user_id FROM '.$wpdb->prefix.'student_profiles  
+            // WHERE user_id=' .$student_id. '');
+            // $parent_mobile = get_userdata($student_user_id->parent_id);
+            // send_sms_selected_student($parent_mobile->user_login);
+            echo json_encode($result);   
+        }
+    }
+
  ?>

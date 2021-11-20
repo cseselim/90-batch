@@ -242,6 +242,17 @@
 .start_date{
     top: 610.8px !important;
 }
+#all_approve_memories_wrapper .dt-buttons {
+    margin-top: 22px;
+    margin-left: 50px;
+    float: inherit;
+}
+#all_approve_memories_filter label{
+	margin-bottom: -54px;
+}
+#all-applicant-list_filter label{
+	margin-bottom: -76px;
+}
 
 @media (max-width: 430px){
 	.admission_row_one .col{

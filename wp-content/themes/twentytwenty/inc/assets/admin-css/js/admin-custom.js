@@ -473,4 +473,130 @@ jQuery(document).ready(function() {
     });
 
 
+/*==========approve memories list================*/
+
+var dataTable = approve_memori_list();
+    
+    function approve_memori_list(search_action, start_date='', end_date=''){
+        var all_applicant_tbl = jQuery('#all_approve_memories').DataTable({
+
+        ajax:{
+         type:'POST',
+         url : ajaxurl,
+         data : {action: "all_unapprove_memories"},
+        },
+        columns: [
+            { data: 'srl' },
+            { data: 'name' },
+            { data: 'student_name' },
+            { data: 'm_text' },
+            { data: 'action' }
+        ],
+       select: true,
+       dom: 'Blfrtip',
+       lengthMenu: [ [10, 25, 50, 100],
+       ['10 Memories', '25 Memories', '50 Memories', '100 Memories'] ],
+      language: {
+            "url": "datatables/italian.lang",
+            "sLengthMenu": "Approved Memories List _MENU_ ",
+            search: "_INPUT_",
+            searchPlaceholder: "Search Memories",
+            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ memories",
+        },
+        buttons: {
+            buttons: [
+                { 
+                    extend: 'csv',
+                    text: 'CSV',
+                    title : 'Approved Memories List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,4,5,6,7,8]
+                    }
+                },
+                { 
+                    extend: 'excel',
+                    text: 'Excel',
+                    title : 'Approved Memories List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,4,5,6,7,8]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    title : 'Approved Memories List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,5,6,7,8]
+                    },
+                    customize: function(doc) {
+                         doc.styles.title = {
+                           fontSize: '22',
+                           alignment: 'center',
+                         }
+                        /*doc.styles.tableHeader = {
+                            backgroundColor:'black',
+                            fontSize:10,
+                            margin: [0,15,0,0],
+                         }*/
+                         /*
+                         doc.styles.tableBodyEven = {
+                           alignment: 'left',
+                           margin: [0,10,0,0],
+                           text: 'Borders:1',
+                         }
+                         doc.styles.tableBodyOdd = {
+                           alignment: 'left',
+                           margin: [0,10,0,0],
+                         }
+                        doc.styles['td:nth-child(2)'] = { 
+                           width: '100px',
+                           'max-width': '100px'
+                         }*/
+                       }  
+                },
+            ]
+        }
+         
+        });
+    }
+
+
+    jQuery(document).on('click', '.m_unapproves', function(){
+        var student_id = jQuery(this).attr('id');
+        var confirms = confirm("Are you want to unapprove this memories?");
+       if (confirms) {
+        jQuery.ajax({
+        type: 'POST',
+        url : ajaxurl,
+        data : {action: "memories_unapprove",student_id: student_id},
+        success: function(response) {
+            jQuery('#all_approve_memories').DataTable().destroy();
+            approve_memori_list();
+        }
+      }) 
+    }
+    });
+
+
 });

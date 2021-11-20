@@ -10,7 +10,7 @@
 
 <div class="container-fluid">
     <div class="admission_table">
-        <h2>Applied Students List</h2>
+        <h2>All memories</h2>
         <div class="row admission_row_one">
             <div class="col-12">
                 <div class="all_applicant">
@@ -92,9 +92,9 @@
             <input type="submit" name="export" class="btn btn-success" value="Parents data for classtune" />
         </form>
     </div> -->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+    <!-- <div class="col-lg-4 col-md-4 col-sm-12 col-12">
         <form style="margin-left: 2%;" method="post" action="<?= get_template_directory_uri() ?>/dashboard-menu/student-excel-file.php">
             <input type="submit" name="export" class="btn btn-success" value="Student data for school" />
         </form>
-    </div>
+    </div> -->
 </div>

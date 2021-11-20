@@ -18,9 +18,9 @@
 
 		// add_submenu_page( 'user_list', "student_details", "", 'edit_posts', 'student-details', 'student_details', 110 );
 
-		add_submenu_page( 'user_list', "Applicant-list", "Memories List", 'edit_posts', 'memories_list', 'memories_list_function', 110 );
+		add_submenu_page( 'user_list', "Applicant-list", "All Memories", 'edit_posts', 'memories_list', 'memories_list_function', 110 );
 
-		add_submenu_page( 'user_list', "studnet-documents", "Approve Memories List", 'edit_posts', 'approve_memories', 'approve_memories_list', 110 );
+		add_submenu_page( 'user_list', "studnet-documents", "All Approve Memories", 'edit_posts', 'approve_memories', 'approve_memories_list', 110 );
 
 	}
 	add_action('admin_menu','admission_add_menu_page');
