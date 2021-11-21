@@ -13,26 +13,6 @@
 
 ?>
 
-<!-- <button id="login_button_fontend" data-toggle="modal" data-target="#loginModal">Login</button>
-
-<!- login Modal -->
-<!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" style="margin: 0px;">Add Memories</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?= do_shortcode('[wpmp_login_form]') ?>
-      </form>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <!-- memories Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

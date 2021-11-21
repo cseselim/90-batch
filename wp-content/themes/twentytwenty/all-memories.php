@@ -61,6 +61,8 @@
 					</div>
 				</div>
 			</div> --><!---end-->
+
+			<?= do_shortcode('[wpmp_register_form]') ?>
 		</div>
 	</div>
 </div>
