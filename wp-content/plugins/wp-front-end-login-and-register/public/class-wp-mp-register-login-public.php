@@ -135,7 +135,7 @@ class Wp_Mp_Register_Login_Public extends Wp_Mp_Register_Login_Generic_Public
                 
                 $response['logged_in'] = true;
                 $response['success'] = __($wpmp_messages_settings['wpmp_login_success_message'], $this->plugin_name);
-                $response['redirection_url'] = $_POST['redirection_url'];
+                // $response['redirection_url'] = $_POST['redirection_url'];
             }
             // sending back the response in right header
             wp_send_json($response);

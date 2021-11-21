@@ -91,7 +91,7 @@
         $student_id = trim($_POST['student_id']);
         global $wpdb;
         $student_apply_table = $wpdb->prefix.'users';
-        $result = $wpdb->update($student_apply_table, array('status' => '1'), array('ID' => $student_id));
+        $result = $wpdb->update($student_apply_table, array('status' => '2'), array('ID' => $student_id));
         if($result){
             // $student_user_id = $wpdb->get_row(' 
             // SELECT user_id FROM '.$wpdb->prefix.'student_profiles  
@@ -154,7 +154,7 @@
         $student_id = trim($_POST['student_id']);
         global $wpdb;
         $student_apply_table = $wpdb->prefix.'users';
-        $result = $wpdb->update($student_apply_table, array('status' => '0'), array('ID' => $student_id));
+        $result = $wpdb->update($student_apply_table, array('status' => '1'), array('ID' => $student_id));
 
         echo json_encode($result);
     }

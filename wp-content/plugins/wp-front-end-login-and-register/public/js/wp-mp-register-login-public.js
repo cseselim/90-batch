@@ -82,7 +82,7 @@
                     $('#wpmp-login-alert').html(data.success);
 
                     // redirect to redirection url provided
-                    window.location = data.redirection_url;
+                    // window.location = data.redirection_url;
 
                 } else {
 

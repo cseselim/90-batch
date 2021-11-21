@@ -12,6 +12,85 @@
  */
 
 ?>
+
+<!-- <button id="login_button_fontend" data-toggle="modal" data-target="#loginModal">Login</button>
+
+<!- login Modal -->
+<!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="margin: 0px;">Add Memories</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?= do_shortcode('[wpmp_login_form]') ?>
+      </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- memories Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="margin: 0px;">Add Memories</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="applicant_form" enctype="multipart/form-data" autocomplete="off">
+          <div id="wpmp-reg-loader-info" class="wpmp-loader" style="text-align: center;margin-bottom: 17px; display: none;">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/images/ajax-loader.gif"/>
+                    <span>Please wait ...</span>
+                </div>
+                <div id="wpmp-register-alert" class="alert alert-danger" role="alert" style="display:none;"></div>
+                <div id="wpmp-mail-alert" class="alert alert-danger" role="alert" style="display:none;">
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="inputSName" class="col-form-label" style="font-size: 15px;">name<span>*</span></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+          </div><!--field-->
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="inputSName" class="col-form-label" style="font-size: 15px;">Memories<span>*</span></label>
+              <textarea name="text" id="text" rows="2" style="height:66px"></textarea>
+            </div>
+          </div><!--field-->
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="inputSName" class="col-form-label" style="font-size: 15px;">School Name<span>*</span></label>
+              <input type="text" class="form-control" id="school_name" name="school_name" placeholder="Name">
+            </div>
+          </div><!--field-->
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="inputSName" class="col-form-label" style="font-size: 15px;">Image<span>*</span></label>
+              <input type="file" class="form-control" id="image" name="image">
+            </div>
+          </div><!--field-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" value="Add Memories">Add Memories</button>
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 			<footer id="site-footer" role="contentinfo" class="header-footer-group" style="background-color: #1D1F27;border-top: 1px solid #ddd;padding: 24px 0px;">
 
 				<div class="section-inner">

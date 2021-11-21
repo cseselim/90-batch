@@ -164,7 +164,8 @@ h1,h2,h3,h4,h5,h6{
 	color: #fff;
 }
 .student_photo img{
-	height: 100%;
+	/*width: 146px;*/
+	height: 156px;
     border-radius: 50%;
     border: 7px solid #FFF;
 }
@@ -230,8 +231,9 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
 .card_img{
-	width: 85%;
+    width: 60px;
     border-radius: 50%;
+    height: 60px;
 }
 .card_col_two{
 	padding: 19px 0px 0px 0px;
@@ -271,9 +273,38 @@ h1,h2,h3,h4,h5,h6{
 .add_memories{
     background: #dd9933;
     border: 1px solid #dd9933;
-    font-size: 18px;
     margin-bottom: 35px;
+    padding: 10px 14px;
+    font-size: 16px !important;
+    font-weight: 700;
+    border-radius: 8px;
 }
 button{
     font-size: 15px !important;
+}
+.foogallery.fg-thumbnail .fg-image {
+    width: 100%;
+    height: 354px;
+}
+#login_button_fontend{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+    background: #DD9933;
+    font-size: 17px !important;
+    padding: 14px 35px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#loginModal .login-from {
+    margin-left: 0%;
+}
+
+#loginModal h3{
+    margin: 0px;
+}
+#btnForgotPassword{
+    display: none;
 }
