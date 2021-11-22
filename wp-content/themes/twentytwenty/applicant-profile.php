@@ -54,12 +54,10 @@
 			                  <div class="card-footer">
 			                    <form method="post" action="<?= get_template_directory_uri() ?>/sslecommerse/checkout_hosted.php">
 
-			                      <input type="text" hidden name="user_id" value="15">
-			                      <input type="text" hidden name="total_amount" value="abc">
+			                      <input type="text" hidden name="user_id" value="7">
+			                      <input type="text" hidden name="total_amount" value="30">
 			                      <input type="text" hidden name="customer_name" value="def">
-			                      <?php if ($student_data['email_address']) { ?>
-			                        <input type="email" hidden name="customer_email" value="abc@gmail.com">
-			                      <?php } ?>
+			                        <input type="email" hidden name="customer_email" value="test@gmail.com">
 			                      <input type="text" hidden name="customer_mobile" value="01301085778">
 			                      <input type="text" hidden name="cus_add1" value="dddd">
 			                      <!-- <input type="text" hidden name="user_id" value="50">

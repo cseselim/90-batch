@@ -1,22 +1,22 @@
 <?php
 
 if (!defined('PROJECT_PATH')) {
-    define('PROJECT_PATH', 'https://admission.classtune.com/sagc/wp-content/themes/admission/sslecommerse'); // Replace this value with your project path
+    define('PROJECT_PATH', 'http://localhost/abc/wp-content/themes/twentytwenty/sslecommerse'); // Replace this value with your project path
 }
 
 if (!defined('API_DOMAIN_URL')) {
-     define('API_DOMAIN_URL', 'https://securepay.sslcommerz.com');
-    // define('API_DOMAIN_URL', 'https://sandbox.sslcommerz.com');
+     // define('API_DOMAIN_URL', 'https://securepay.sslcommerz.com');
+    define('API_DOMAIN_URL', 'https://sandbox.sslcommerz.com');
 }
 
 if (!defined('STORE_ID')) {
-     define('STORE_ID', 'classtunelive');
-    // define('STORE_ID', 'testbox');
+     // define('STORE_ID', 'classtunelive');
+     define('STORE_ID', 'testbox');
 }
 
 if (!defined('STORE_PASSWORD')) {
-     define('STORE_PASSWORD', '5FAD10414701B17812');
-    // define('STORE_PASSWORD', 'qwerty');
+     // define('STORE_PASSWORD', '5FAD10414701B17812');
+    define('STORE_PASSWORD', 'qwerty');
 }
 
 if (!defined('IS_LOCALHOST')) {

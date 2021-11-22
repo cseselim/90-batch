@@ -40,10 +40,10 @@ ini_set('display_errors', 0);
                 $ot = new OrderTransaction();
                 /*$sql = $ot->getRecordQuery($tran_id);*/
                 
-                $row = $wpdb->get_row( "SELECT * FROM onad_payments WHERE transaction_id = '" . $tran_id . "'", ARRAY_A );
+                $row = $wpdb->get_row( "SELECT * FROM ng_payments WHERE transaction_id = '" . $tran_id . "'", ARRAY_A );
 
-                /*print_r($sql);
-                exit();*/
+                // print_r($row);
+                // exit();
                 /*$result = $conn_integration->query($sql);
                 $row = $result->fetch_array(MYSQLI_ASSOC);*/
 
@@ -54,125 +54,20 @@ ini_set('display_errors', 0);
 
                     if ($validated) {
 
-                        $sql = $wpdb->update('onad_payments', array('payment_status'=> 'Processing','val_id'=> $_POST['val_id'],'card_type'=> $_POST['card_type'],'store_amount'=> $_POST['store_amount'],'bank_status'=> $_POST['status'],'tran_date'=> $_POST['tran_date'],'card_brand'=> $_POST['card_brand'],'all_info'=> $all_info,'paymentID'=> $tran_id,'trxID'=> $tran_id,'gateway'=> $_POST['card_brand']), array('transaction_id' => $tran_id ));
+                        $sql = $wpdb->update('ng_payments', array('payment_status'=> 'done','val_id'=> $_POST['val_id'],'card_type'=> $_POST['card_type'],'store_amount'=> $_POST['store_amount'],'bank_status'=> $_POST['status'],'tran_date'=> $_POST['tran_date'],'card_brand'=> $_POST['card_brand'],'all_info'=> $all_info,'paymentID'=> $tran_id,'trxID'=> $tran_id,'gateway'=> $_POST['card_brand']), array('transaction_id' => $tran_id ));
 
                         if ($sql) { ?>
                             <?php
                                 global $wpdb; 
                                 
-                                //$result = $wpdb->update('onad_student_profiles', array('status' => '1'), array('id' => $row['user_id']));
-
-                                /*===============application data insert===============*/
-                                
-                                $session_table = $wpdb->prefix.'sessions';
-                                $applicent_table = $wpdb->prefix.'student_application';
-                                $parent_id = $row['student_id']; 
-                                $exists_id = $wpdb->get_row( "SELECT parent_id,student_id,institute_id,programe_id,academic_group,version_id,shift,category_id,rank,unit,session_id,student_age FROM $session_table WHERE parent_id = $parent_id", ARRAY_A );
-
-                                $data = array(
-                                    'parent_id' => $exists_id['parent_id'],
-                                    'student_id' => $exists_id['student_id'],
-                                    'institute_id' => $exists_id['institute_id'],
-                                    'payment_status' => 1,
-                                    'class' => $exists_id['programe_id'],
-                                    'academic_group' => $exists_id['academic_group'],
-                                    'version_id' => $exists_id['version_id'],
-                                    'shift' => $exists_id['shift'],
-                                    'category' => $exists_id['category_id'],
-                                    'rank' => $exists_id['rank'],
-                                    'unit' => $exists_id['unit'],
-                                    'session' => $exists_id['session_id'],
-                                    'transaction_id' => $tran_id,
-                                    'student_age' => $exists_id['student_age'],
-                                );
-
-                                    
-                                $version_id = $exists_id['version_id'];
-                                $student_id = $exists_id['student_id'];
-                                $shift = $exists_id['shift'];
-                                $programe_id = $exists_id['programe_id'];
-
-                                if ($programe_id == 'nursery' && $version_id == "1" && $shift == 'morning') {
-                                $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "' AND version_id = '" .$version_id. "' AND shift = '".$shift."'", ARRAY_A );
-                                $new_student_roll = $student_roll['student_roll'] + 1;
-                                
-                                if (empty($student_roll['student_roll'])) {
-                                  $data['student_roll'] = "1001";
-                                  $data['version'] = "Bangla";
-                                }else{
-                                  $data['student_roll'] = $new_student_roll;
-                                  $data['version'] = "Bangla";
-                                }
-                                
-                                }elseif($programe_id == 'nursery' && $version_id == "1" && $shift == 'day'){
-                                  $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "' AND version_id = '" .$version_id. "' AND shift = '".$shift."'", ARRAY_A );
-                                  $new_student_roll = $student_roll['student_roll'] + 1;
-                                  
-                                  if (empty($student_roll['student_roll'])) {
-                                    $data['student_roll'] = "10001";
-                                    $data['version'] = "Bangla";
-                                  }else{
-                                    $data['student_roll'] = $new_student_roll;
-                                    $data['version'] = "Bangla";
-                                  }
-                              
-                                }elseif($programe_id == 'nursery' && $version_id == "3" && $shift == 'morning'){
-                                  $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "' AND version_id = '" .$version_id. "' AND shift = '".$shift."'", ARRAY_A );
-                                  $new_student_roll = $student_roll['student_roll'] + 1;
-                                  
-                                  if (empty($student_roll['student_roll'])) {
-                                    $data['student_roll'] = "5001";
-                                    $data['version'] = "English medium";
-                                  }else{
-                                    $data['student_roll'] = $new_student_roll;
-                                    $data['version'] = "English medium";
-                                  }
-                                }elseif($programe_id == 'nine' && $version_id == "1" && $shift == 'morning'){
-                                  $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "'  AND version_id = '".$version_id."'", ARRAY_A );
-                                  $new_student_roll = $student_roll['student_roll'] + 1;
-                                  
-                                  if (empty($student_roll['student_roll'])) {
-                                    $data['student_roll'] = "15001";
-                                    $data['version'] = "Bangla";
-                                  }else{
-                                    $data['student_roll'] = $new_student_roll;
-                                    $data['version'] = "Bangla";
-                                  }
-                                }elseif($programe_id == 'nine' && $version_id == "2" && $shift == 'morning'){
-                                  $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "' AND version_id = '".$version_id."'", ARRAY_A );
-                                  $new_student_roll = $student_roll['student_roll'] + 1;
-                                  
-                                  if (empty($student_roll['student_roll'])) {
-                                    $data['student_roll'] = "20001";
-                                    $data['version'] = "English";
-                                  }else{
-                                    $data['student_roll'] = $new_student_roll;
-                                    $data['version'] = "English";
-                                  }
-                                }else{
-                                
-                //                 $student_roll = $wpdb->get_row( "SELECT max(student_roll) as student_roll FROM $applicent_table WHERE class = '" .$programe_id. "' ", ARRAY_A );
-                //                $new_student_roll = $student_roll['student_roll'] + 1;
-                //
-                //                if (empty($student_roll['student_roll'])) {
-                //                  $data['student_roll'] = "40001";
-                //                  $data['version'] = "Bangla";
-                //                }else{
-                //                  $data['student_roll'] = $new_student_roll;
-                //                  $data['version'] = "Bangla";
-                //                }
-                                }
-
-                                $bkashformat = array('%d','%d','%d','%d','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');
-                                $result = $wpdb->insert($applicent_table,$data,$bkashformat);
+                                $result = $wpdb->update('ng_users', array('status' => '2'), array('ID' => $row['student_id']));
 
                                 if ($result) {
                                     //send_sms_selected_dstudent($row['phone']);
-                                    $wpdb->delete( $session_table, array( 'parent_id' => $parent_id), array('%d'));
-                                    header("Location: https://admission.classtune.com/sagc/application-done");
+                                    header("Location: http://localhost/abc/application-done");
                                 }else{
                                     $_SESSION["p_msg"] = "Something worng";
-                                    header("Location: https://admission.classtune.com/sagc/transaction");
+                                    header("Location: http://localhost/abc/payment");
                                 }
                              ?>
                             <!-- <h2 class="text-center text-success">Congratulations! Your Transaction is Successful.</h2>
