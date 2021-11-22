@@ -19,7 +19,7 @@
 	           <div class="applicant_profile">
 	        	</div>
 
-         			<div class="row site_row_one">
+         			<!-- <div class="row site_row_one">
             			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
               				<div class="card text-center">
                   				<div class="card-header">
@@ -36,7 +36,46 @@
                  				 </div>
              				</div> 
             			</div>
-       				</div>
+       				</div> -->
+
+
+       				<div class="row site_row_one">
+			          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+			              <div class="card text-center">
+			                  <div class="card-header">
+			                      <strong>Payment amount <strong>BDT <?= $student_data['amount'] ?> for <?= $student_data['student_name'] ?></strong></strong>
+			                  </div>
+			                <!--  <div class="card-header">
+			                     bKash
+			                  </div> -->
+			                  <div class="card-body">
+			                      <img src="<?= bloginfo('template_directory');?>/image/sslecommerz.png" alt="bkash" style="width:75%">
+			                  </div>
+			                  <div class="card-footer">
+			                    <form method="post" action="<?= get_template_directory_uri() ?>/sslecommerse/checkout_hosted.php">
+
+			                      <input type="text" hidden name="user_id" value="15">
+			                      <input type="text" hidden name="total_amount" value="abc">
+			                      <input type="text" hidden name="customer_name" value="def">
+			                      <?php if ($student_data['email_address']) { ?>
+			                        <input type="email" hidden name="customer_email" value="abc@gmail.com">
+			                      <?php } ?>
+			                      <input type="text" hidden name="customer_mobile" value="01301085778">
+			                      <input type="text" hidden name="cus_add1" value="dddd">
+			                      <!-- <input type="text" hidden name="user_id" value="50">
+			                      <input type="text" hidden name="total_amount" value="10">
+			                      <input type="text" hidden name="customer_name" value="selim">
+			                      <?php if ($student_id['email_address']) { ?>
+			                        <input type="email" hidden name="customer_email" value="abc@gmail.com">
+			                      <?php } ?>
+			                      <input type="text" hidden name="customer_mobile" value="01301085779">
+			                      <input type="text" hidden name="cus_add1" value="abc ddd"> -->
+			                    <button class="btn btn-success w-100" style="background-color: #00AEEE;font-size: 23px;padding: 18px 0px;">Pay Now</button> 
+			                    </form>
+			                 </div>
+			            </div> 
+			          </div>
+			      </div>
 	        </div>
             
             <div class="col-lg-1 col-md-1 col-sm-0 col-0"></div>
