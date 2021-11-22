@@ -111,7 +111,7 @@
 </div>
 
 <script>
-
 jQuery(document).on('click','.fa-calendar',function(){
    jQuery('#wpmp_date').focus();
 });
+</script>

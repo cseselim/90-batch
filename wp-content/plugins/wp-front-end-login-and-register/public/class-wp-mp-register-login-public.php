@@ -342,7 +342,7 @@ class Wp_Mp_Register_Login_Public extends Wp_Mp_Register_Login_Generic_Public
                     
                     // $response['logged_in'] = true;
                     // $response['success'] = __('You are successfully registered.', $this->plugin_name);
-                    // $response['redirection_url'] = "https://admission.classtune.com/sagc/applicant-profile/";
+                    $response['redirection_url'] = "https://admission.classtune.com/sagc/applicant-profile/";
                 }
             }
             // sending back the response in right header

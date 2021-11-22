@@ -1,5 +1,6 @@
-<?php 
-	/*Template Name: All Memories*/
+
+ <?php 
+	/*Template Name: registration*/
 	get_header();
  ?>
 
@@ -61,6 +62,8 @@
 					</div>
 				</div>
 			</div> --><!---end-->
+
+			<?= do_shortcode('[wpmp_register_form]') ?>
 		</div>
 	</div>
 </div>

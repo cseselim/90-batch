@@ -1,3 +1,5 @@
+jQuery(document).ready(function(){
+
 (function($) {
     'use strict';
 
@@ -82,7 +84,8 @@
                     $('#wpmp-login-alert').html(data.success);
 
                     // redirect to redirection url provided
-                    // window.location = data.redirection_url;
+                    window.location = 'http://localhost/abc/payment/';
+                    //alert(data.redirection_url);
 
                 } else {
 
@@ -513,3 +516,4 @@
     }
 
 })(jQuery);
+})
