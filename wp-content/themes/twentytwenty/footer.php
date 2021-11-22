@@ -140,30 +140,60 @@
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/formValidation.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/formfieldvalidation.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/bootstrap.formvalidation.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+	    window.onscroll = function () {
+	        scrollFunction()
+	    };
 
-		<script type="text/javascript">
-			jQuery(document).ready(function () {
-			    window.onscroll = function () {
-			        scrollFunction()
-			    };
+	    function scrollFunction() {
+	        if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {
+	            jQuery('.header-titles img').css('width', '35%');
+	            jQuery('#site-header').removeClass('bg-light');
+	            jQuery('#site-header').addClass('header_scroll');
+	        } else {
+	            jQuery('.header-titles img').css('width', '');
+	            jQuery('#site-header').removeClass('header_scroll');
+	        }
+	    }
+	})
+	</script>
 
-			    function scrollFunction() {
-			        if (document.body.scrollTop > 8 || document.documentElement.scrollTop > 8) {
-			            jQuery('.header-titles img').css('width', '35%');
-			            jQuery('#site-header').removeClass('bg-light');
-			            jQuery('#site-header').addClass('header_scroll');
-			        } else {
-			            jQuery('.header-titles img').css('width', '');
-			            jQuery('#site-header').removeClass('header_scroll');
-			        }
-			    }
-			})
-			</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+     $('.school_carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay:true,
+        autoplayTimeout:3000,
+        responsiveClass: true,
+        dots:false,
+        nav: false,
+        // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        responsive: {
+          0: {
+            items: 1,
+            nav: true,
+          },
+          600: {
+            items: 1,
+            nav: true,
+          },
+          1000: {
+            items: 1,
+            nav: true,
+            loop: true,
+            margin: 20
+          }
+        }
+      })
+  })
+  </script>
 
-		<script type="text/javascript">
+<script type="text/javascript">
 jQuery(document).ready(function() {
 		        
-
 jQuery('#memories_form').formValidation({
 
       feedbackIcons: {

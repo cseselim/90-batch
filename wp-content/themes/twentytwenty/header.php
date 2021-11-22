@@ -31,12 +31,10 @@
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/formValidation.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/owl.carousel.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard-responsive.css">
 		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/jquery-3.2.1.min.js"></script>
-		
-
-
 		<link rel="stylesheet" type="text/css" href="<?= get_template_directory_uri()?>/assets/css/main.css">
 		<?php wp_head(); ?>
 
