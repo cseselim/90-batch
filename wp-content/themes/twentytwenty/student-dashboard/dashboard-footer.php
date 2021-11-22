@@ -2,7 +2,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-12">
-					<p class="my-auto">© 2020 All rights reserved by <a href="http://classtune.com/" target="_blank">classtune.com</a></p>
+					<p class="my-auto">© <?= date('Y') ?> All rights reserved by <a href="http://classtune.com/" target="_blank">classtune.com</a></p>
 				</div>
 			</div>
 		</div>

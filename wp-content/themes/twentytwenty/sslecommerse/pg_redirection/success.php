@@ -64,7 +64,7 @@ ini_set('display_errors', 0);
 
                                 if ($result) {
                                     //send_sms_selected_dstudent($row['phone']);
-                                    header("Location: http://localhost/abc/application-done");
+                                    header("Location: http://localhost/abc/payment-done");
                                 }else{
                                     $_SESSION["p_msg"] = "Something worng";
                                     header("Location: http://localhost/abc/payment");
