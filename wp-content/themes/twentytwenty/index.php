@@ -62,7 +62,7 @@ get_header();
 				<div class="event_title">
 					<img src="<?php bloginfo('template_directory'); ?>/assets/images/header-top.png')">
 					<h1>When & Where</h1>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+					<p>Mark your calendar for Friday on 28th January 2022. Let us all gather at the Osmani Stadium at 4.00 pm and meet our beloved childhood friends. The venue to be decorated elegantly and will offer you a great atmosphere to foster friendship. Look forward to creating a mind-blowing memory to cherish throughout rest of our lives. A great gathering awaits for SSC 90 batch students from all schools of Narayanganj.</p>
 				</div>
 			</div>
 		</div>
@@ -72,7 +72,7 @@ get_header();
 					'post_type'   => 'post',
 					'cat'=>'3',
 					'posts_per_page' => '3',
-					'order' => 'DESC',
+					'order' => 'ASC',
 				);
 				$events = new WP_Query( $args );
 
@@ -215,7 +215,7 @@ get_header();
 					<p style="margin-bottom: 27px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-primary add_memories" data-toggle="modal" data-target="#exampleModal">
-					  Add Memories
+					  Submit Memories
 					</button>
 				</div>
 			</div>

@@ -122,7 +122,7 @@ h1,h2,h3,h4,h5,h6{
     clear: both;
     margin: 0;
     letter-spacing: .01em;
-    width: 600px;
+    width: 971px;
     margin: 0 auto;
     margin-bottom: 65px;
 }
@@ -334,4 +334,8 @@ button{
 }
 #wpmpRegisterSection{
     margin-bottom: 0px;
+}
+.modal
+{
+    z-index: 999999;
 }

@@ -50,13 +50,42 @@
                         <label for="phone"><?php _e('Mobile No', $this->plugin_name); ?> <span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="wpmp_username" id="wpmp_username" placeholder="Mobile No" autocomplete="off">
                     </div>
+
+                    <div class="form-group">
+                        <select class="form-control" id="other_school" name="school_name" style="font-size: 19px !important;height: 42px;margin-top: 22px;">
+                            <option value="">Select School</option>
+                            <option value="Adarsha School Narayanganj">Adarsha School Narayanganj </option>
+                            <option value="Narayanganj High School">Narayanganj High School </option>
+                            <option value="IET High School">IET High School</option>
+                            <option value="Bar Academy">Bar Academy </option>
+                            <option value="Govt. Girls High School">Govt. Girls High School </option>
+                            <option value="Amlapara Girls High School">Amlapara Girls High School</option>
+                            <option value="Joy Gobindo High School">Joy Gobindo High School </option>
+                            <option value="BM Union High School">BM Union High School </option>
+                            <option value="Morgan Girls High School">Morgan Girls High School</option>
+                            <option value="Bibi Mariam High School">Bibi Mariam High School</option>
+                            <option value="Horihor Para High School">Horihor Para High School</option>
+                            <option value="Gono Bidya Niketon">Gono Bidya Niketon</option>
+                            <option value="Adarsha Balika Uccho Biddalaya">Adarsha Balika Uccho Biddalaya</option>
+                            <option value="Others">Others (Please mention your school name)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="other_school_field" style="display: none;">
+                        <label for="phone">School Name<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" name="other_school_name" id="other_school_name" placeholder="School name" autocomplete="off">
+                    </div>
                     
                     <div class="form-group">
-                        <label for="email"><?php _e('Email', $this->plugin_name); ?> (Optional)</label>
+                        <label for="email"><?php _e('Email', $this->plugin_name); ?><span style="color:red">*</span></label>
                         <input type="text" class="form-control" name="wpmp_email" id="wpmp_email" placeholder="Email" autocomplete="off">
                     </div>
                     
-    
+                    <div class="form-group">
+                        <label for="email">Present Address:<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" name="address" id="address" placeholder="Present Address" autocomplete="off">
+                    </div>
+
                     <div class="form-group">
                         <label for="file"><?php _e('Profile Image', $this->plugin_name); ?></label>
                         <input type="file" class="form-control" name="wpmp_pic" id="wpmp_pic" style="width: 35%;">
@@ -111,6 +140,16 @@
 </div>
 
 <script>
+    jQuery(document).ready(function(){
+        jQuery('#other_school').change(function(){
+            var name = jQuery(this).val();
+            if (name == 'Others') {
+                jQuery('#other_school_field').show();
+            }else{
+                jQuery('#other_school_field').hide();
+            }
+        })
+    })
 jQuery(document).on('click','.fa-calendar',function(){
    jQuery('#wpmp_date').focus();
 });

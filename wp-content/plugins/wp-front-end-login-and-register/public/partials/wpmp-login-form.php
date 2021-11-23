@@ -48,11 +48,11 @@
 
                     <div class="form-group">
                         <label for="username"><?php _e('Phone Number', $this->plugin_name); ?></label>
-                        <input type="text" class="form-control" name="wpmp_username" id="wpmp_username" placeholder="Phone Number">
+                        <input autocomplete="off" type="text" class="form-control" name="wpmp_username" id="wpmp_username" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
                         <label for="password"><?php _e('Password', $this->plugin_name); ?></label>
-                        <input type="password" class="form-control" name="wpmp_password" id="wpmp_password" placeholder="Password" >
+                        <input autocomplete="off" type="password" class="form-control" name="wpmp_password" id="wpmp_password" placeholder="Password" >
                     </div>
                     <?php
                     $login_redirect = (empty($wpmp_redirect_settings['wpmp_login_redirect']) || $wpmp_redirect_settings['wpmp_login_redirect'] == '-1') ? '' : $wpmp_redirect_settings['wpmp_login_redirect'];
@@ -69,6 +69,9 @@
                     <button id="btnForgotPassword" type="button" class="btn btn-primary"><a href="javascript:void(0);"><?php _e($forgotpassword_button_text, $this->plugin_name); ?></a></button>
 
                     <button type="submit" id="login_button" class="btn btn-primary" ><?php _e($submit_button_text, $this->plugin_name); ?></button>
+                    <!-- <button>
+                        <a style="color: #fff;padding: 0px;" href="<?php home_url() ?>registration/">Get Registered</a>
+                    </button> -->
                     <?php
                         //render forgot password button
                         if($wpmp_form_settings['wpmp_enable_forgot_password']){                            

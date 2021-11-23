@@ -311,8 +311,11 @@ class Wp_Mp_Register_Login_Public extends Wp_Mp_Register_Login_Generic_Public
                 }
                 
                 $phone = trim($_POST['wpmp_username']);
+                $school_name = trim($_POST['school_name']);
+                $other_school_name = trim($_POST['other_school_name']);
+                $address = trim($_POST['address']);
                 
-                $sql = $wpdb->prepare("INSERT INTO `ng_user_infos` (`user_id`,`phone`,`image`) values (%d,%s,%s)", $user_id,$phone,$image);
+                $sql = $wpdb->prepare("INSERT INTO `ng_user_infos` (`user_id`,`phone`,`image`,`school_name`,`other_school_name`,`address`) values (%d,%s,%s,%s,%s,%s)", $user_id,$phone,$image,$school_name,$other_school_name,$address );
                 $wpdb->query($sql);
             }
 

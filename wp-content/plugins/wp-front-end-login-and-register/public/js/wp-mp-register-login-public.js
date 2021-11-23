@@ -227,6 +227,14 @@ jQuery(document).ready(function(){
                         }
                     }
                 },
+
+                school_name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'School name is required'
+                        }
+                    }
+                },
                 wpmp_fname: {
                     validators: {
                         notEmpty: {
@@ -245,14 +253,27 @@ jQuery(document).ready(function(){
 
                 wpmp_email: {
                     validators: {
+                        notEmpty: {
+                            message: 'Email is required'
+                        },
                         regexp: {
                             regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
                             message: 'The value is not a valid email address'
                         }
                     }
                 },
+                address: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Address is required'
+                        },
+                    }
+                },
                 wpmp_pic: {
                     validators: {
+                        notEmpty: {
+                            message: 'Profile picture is required'
+                        },
                         file: {
                             extension: 'jpeg,jpg,png',
                             type: 'image/jpeg,image/png',
