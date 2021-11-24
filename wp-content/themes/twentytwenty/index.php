@@ -164,7 +164,7 @@ get_header();
 				$user_table = $wpdb->prefix.'users';
 		        $user_info = $wpdb->prefix.'user_infos';
 		        $user_data = $wpdb->get_results( "SELECT user.display_name,user.user_email,user_info.image FROM $user_table AS user
-		            INNER JOIN $user_info AS user_info  ON user.ID = user_info.user_id
+		            INNER JOIN $user_info AS user_info  ON user.ID = user_info.user_id WHERE user.status=3
 		            " );
 		     foreach ($user_data as  $value) {
 			?>
