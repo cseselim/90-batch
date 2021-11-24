@@ -22,6 +22,8 @@
 
 		add_submenu_page( 'user_list', "studnet-documents", "All Approve Memories", 'edit_posts', 'approve_memories', 'approve_memories_list', 110 );
 
+		add_submenu_page( 'user_list', "paid-user", "Paid User", 'edit_posts', 'paid_user', 'paid_users', 110 );
+
 	}
 	add_action('admin_menu','admission_add_menu_page');
 
@@ -53,5 +55,9 @@
 
 	function approve_memories_list(){
 		require_once get_template_directory() . '/dashboard-menu/student-document.php';
+	}
+
+	function paid_users(){
+		require_once get_template_directory() . '/dashboard-menu/paid-user.php';
 	}
  ?>

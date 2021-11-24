@@ -22,6 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/formValidation.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/inc/assets/css/student-dashboard-responsive.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
@@ -47,7 +48,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
                       <li class="nav-item">
-                        <a class="nav-link" href="<?= home_url() ?>/?page_id=36/">Payment</a>
+                        <a class="nav-link" href="<?= home_url() ?>/download-admit">Download document</a>
                       </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">

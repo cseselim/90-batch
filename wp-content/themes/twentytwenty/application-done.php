@@ -24,7 +24,7 @@
                             WHERE student_id = $user_id order by id DESC" );
 	               ?>
                		<h2 class="alert alert-success">Congratulations!</h2>
-	              <h2 class="alert alert-success">অভিনন্দন! আপনার পেমেন্ট সফলভাবে সাবমিট হয়েছে।</h2>
+	              <h2 class="alert alert-success">Payment successful</h2>
 	              
 	               <div class="payment_details">
 	        		<div class="row alert-success mr-0 ml-0">

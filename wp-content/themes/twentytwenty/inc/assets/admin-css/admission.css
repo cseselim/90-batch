@@ -329,3 +329,24 @@
 		margin-bottom: 15px;
 	}
 }
+
+
+#paid_user_wrapper .dt-buttons{
+	margin-top: 21px;
+}
+#paid_user_filter input {
+	height: 43px;
+    font-size: 17px;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+#paid_user_length label{
+	font-weight: 600;
+}
+
+#footer-thankyou{
+	display: none;
+}
+#footer-upgrade{
+	display: none;
+}

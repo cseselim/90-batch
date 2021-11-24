@@ -2,26 +2,19 @@
     global $wpdb; 
 
     $student_apply_table = $wpdb->prefix.'users';
-    $numRows = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE  status='0'");
-    $today = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE date(user_registered) = CURDATE() AND status='0'");
+    $numRows = $wpdb->get_var( "SELECT COUNT(*) FROM $student_apply_table WHERE  status='3'");
  ?>
 
 
 
 <div class="container-fluid">
     <div class="admission_table">
-        <h2>Register User List</h2>
+        <h2>Paid User List</h2>
         <div class="row admission_row_one">
             <div class="col">
                 <div class="all_applicant">
                     <h3><?= $numRows; ?></h3>
-                    <h4>Total Register User</h4>
-                </div>
-            </div>
-            <div class="col">
-                <div class="all_applicant tody_a">
-                    <h3><?= $today ? $today : 0; ?></h3>
-                    <h4>Today's Register User</h4>
+                    <h4>Total Paid User</h4>
                 </div>
             </div>
         </div>
@@ -57,7 +50,7 @@
             </div>
         </div> -->
 
-        <table id="example" class="display" style="width:100%">
+        <table id="paid_user" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th>Srl</th>

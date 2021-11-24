@@ -14,6 +14,14 @@
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/inc/assets/js/bootstrap.formvalidation.min.js"></script>
 	
     <?php   require_once 'dashboard-script/dashboard-script.php'; ?>
+
+    <script type="text/javascript">
+    	jQuery(document).ready(function(){
+    		jQuery('.dropdown').click(function(){
+  				jQuery('.dropdown-menu').toggleClass('show');
+			});
+    	});
+    </script>
     
 </body>
 </html>

@@ -42,8 +42,8 @@
                     <?php endif; ?>
 
                     <div class="form-group">
-                        <label for="name"><?php _e('Name', $this->plugin_name); ?> <span style="color:red">*</span></label>
-                        <input type="text" class="form-control" name="wpmp_fname" id="wpmp_fname" placeholder="User Name" autocomplete="off">
+                        <label for="name">Full Name <span style="color:red">*</span></label>
+                        <input type="text" class="form-control" name="wpmp_fname" id="wpmp_fname" placeholder="Full Name" autocomplete="off">
                     </div>
 
                     <div class="form-group">
@@ -52,7 +52,8 @@
                     </div>
 
                     <div class="form-group">
-                        <select class="form-control" id="other_school" name="school_name" style="font-size: 19px !important;height: 42px;margin-top: 22px;">
+                        <label for="name">Full Name <span style="color:red">*</span></label>
+                        <select class="form-control" id="other_school" name="school_name" style="font-size: 19px !important;height: 42px;">
                             <option value="">Select School</option>
                             <option value="Adarsha School Narayanganj">Adarsha School Narayanganj </option>
                             <option value="Narayanganj High School">Narayanganj High School </option>
@@ -87,7 +88,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="file"><?php _e('Profile Image', $this->plugin_name); ?></label>
+                        <label for="email">Profession:<span style="color:red">*</span></label>
+                        <input type="text" class="form-control" name="profession" id="profession" placeholder="Profession" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Special Position you held that you want to mention: (Optional):</label>
+                        <input type="text" class="form-control" name="special_position" id="special_position" placeholder="Special Position" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Memory:<span style="color:red">*</span></label>
+                        <textarea class="form-control" name="memory" id="memory" placeholder="Memory" style="height: 200px" autocomplete="off"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file"><?php _e('Profile Image', $this->plugin_name); ?><span style="color:red">*</span></label>
                         <input type="file" class="form-control" name="wpmp_pic" id="wpmp_pic" style="width: 35%;">
                     </div>
 

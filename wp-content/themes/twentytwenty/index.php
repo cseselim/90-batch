@@ -41,7 +41,7 @@ get_header();
             <div class="slider_overlay"></div>
         </div>
         <div class="item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/slider_image.jpg">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/slider-3.jpg">
             <div class="slider_overlay"></div>
         </div>
 	</div>
@@ -50,6 +50,34 @@ get_header();
 			<div class="slider_content">
 				<h3>Narayanganj ’90</h3>
 				<h1>Class Reunion</h1>
+				<div id="time_countdown">
+					<div class="row">
+						<div class="col-md-3">
+							<span class="days">
+								<p id="days"></p>
+								<p class="time_title">Days</p>
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span class="hours">
+								<p id="hours"></p>
+								<p class="time_title">Hours</p>
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span class="minutes">
+								<p id="minutes"></p>
+								<p class="time_title">Minutes</p>
+							</span>
+						</div>
+						<div class="col-md-3">
+							<span class="seconds">
+								<p id="seconds"></p>
+								<p class="time_title">Seconds</p>
+							</span>	
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

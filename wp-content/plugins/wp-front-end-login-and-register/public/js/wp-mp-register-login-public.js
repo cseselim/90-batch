@@ -269,6 +269,13 @@ jQuery(document).ready(function(){
                         },
                     }
                 },
+                profession: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Profession is required'
+                        },
+                    }
+                },
                 wpmp_pic: {
                     validators: {
                         notEmpty: {

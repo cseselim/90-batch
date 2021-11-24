@@ -41,12 +41,13 @@
        					$user_id = get_current_user_id();
 				        $user_table = $wpdb->prefix.'users';
 				        $user_info = $wpdb->prefix.'user_infos';
-				        $user_data = $wpdb->get_row( "SELECT user.display_name,user.user_email,user_info.amount,user_info.address FROM $user_table AS user
+				        $user_data = $wpdb->get_row( "SELECT user.display_name,user.user_email,user_info.amount,user_info.address,user.status FROM $user_table AS user
 				            INNER JOIN $user_info AS user_info  ON user.ID = user_info.user_id
 				            WHERE user.ID = $user_id" );
-				        print_r($user_data);
        				?>
        				<div class="row site_row_one">
+
+       				<?php if($user_data->status == 1){ ?>	
 			          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
 			              <div class="card text-center">
 			                  <div class="card-header">
@@ -73,6 +74,56 @@
 			                 </div>
 			            </div> 
 			          </div>
+			          <?php }else{ ?>
+			          	<div class="row profile_row_two">
+		        		    <h4>User Profile</h4>
+		        			<div class="profile_table table-responsive">
+		        				<table class="table">
+		        				    <thead>
+		        				        <tr>
+		        				            <th>Srl</th>
+		        				            <th>Photo</th>
+		        				            <th>Details</th>
+		        				            <th>Action</th>
+		        				        </tr>
+		        				    </thead>
+
+		        				    <tbody>
+		        				    	<?php
+										    $user_id = get_current_user_id();
+									        $user_table = $wpdb->prefix.'users';
+									        $user_info = $wpdb->prefix.'user_infos';
+									        $user_data = $wpdb->get_row( "SELECT user.display_name,user.user_email,user_info.amount,user_info.address,user.status,user_info.image FROM $user_table AS user
+									            INNER JOIN $user_info AS user_info  ON user.ID = user_info.user_id
+									            WHERE user.ID = $user_id" );
+										    $i = 0;
+										 if(!empty($user_data)){
+										 ?>
+		        				        <tr>
+		        				            <td><?= $i ?></td>
+		        				            <td><img src="<?= $user_data->image ?>" width="100px"></td>
+		        				            <td class="pro_fix_col">
+		        				                <strong>Student Name : </strong><?= $user_data->display_name ?>
+		        				                <br>
+		        				                <strong>Email : </strong><?= $user_data->user_email ?>
+		        				                <br>
+		        				                <strong>Address :</strong><?= $user_data->address ?>
+		        				            </td>
+		        				            <td>
+		        				                <div class="btn-group-vertical">
+		        				                	<a href="<?= home_url() ?>/download-admit">
+		        				                    	<button style="border-radius: 10px !important" class="apply_b btn btn-success" type="submit"><i class="fas fa-paper-plane">Download Document</i></button>
+		        				                   	</a>
+		        				                </div>
+		        				            </td>
+		        				        </tr>
+		        				    <?php }?>
+		        				    </tbody>
+		        				</table>
+		        			</div>
+		        		</div>
+			        <?php } ?>
+			          </div>
 			      </div>
 	        </div>
             
@@ -92,5 +143,5 @@
 		}
 	 ?>
 <?php 
-	// require_once 'student-dashboard/dashboard-footer.php';
+	require_once 'student-dashboard/dashboard-footer.php';
  ?>

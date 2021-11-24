@@ -599,4 +599,119 @@ var dataTable = approve_memori_list();
     });
 
 
+
+
+    var dataTable = paid_user('no');
+    
+    function paid_user(search_action, start_date='', end_date=''){
+        var dataTable = jQuery('#paid_user').DataTable({
+
+        ajax:{
+         type:'POST',
+         url : ajaxurl,
+         data : {action: "all_paid_users",search_action: search_action, start_date: start_date, end_date: end_date},
+        },
+        columns: [
+            { data: 'srl' },
+            { data: 'student_name' },
+            { data: 'index_no' },
+            /*{ data: 'father_name' },*/
+            // { data: 'category' },
+            /*{ data: 'mother_name' },
+            { data: 'contact_no' },
+            { data: 'class' },
+            { data: 'shift' },*/
+            { data: 'action' }
+        ],
+       select: true,
+       dom: 'Blfrtip',
+       lengthMenu: [ [10, 25, 50, 100],
+       ['10 User', '25 User', '50 User', '100 User'] ],
+      language: {
+            "url": "datatables/italian.lang",
+            "sLengthMenu": "Resigter user list _MENU_ ",
+            search: "_INPUT_",
+            searchPlaceholder: "Search applicant",
+            "info": "Showing _PAGE_ to _PAGE_ of _PAGES_ user",
+        },
+        buttons: {
+            buttons: [
+                { 
+                    extend: 'csv',
+                    text: 'CSV',
+                    title : 'Resigter User List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,4,5,6,7,8]
+                    }
+                },
+                { 
+                    extend: 'excel',
+                    text: 'Excel',
+                    title : 'Resigter User List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,4,5,6,7,8]
+                    }
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF',
+                    title : 'Resigter User List',
+                    exportOptions : {
+                        modifier : {
+                            // DataTables core
+                            order : 'index', // 'current', 'applied',
+                            //'index', 'original'
+                            page : 'all', // 'all', 'current'
+                            search : 'none' // 'none', 'applied', 'removed'
+                        },
+                        columns: [ 0,1,2,3,5,6,7,8]
+                    },
+                    customize: function(doc) {
+                         doc.styles.title = {
+                           fontSize: '22',
+                           alignment: 'center',
+                         }
+                        /*doc.styles.tableHeader = {
+                            backgroundColor:'black',
+                            fontSize:10,
+                            margin: [0,15,0,0],
+                         }*/
+                         /*
+                         doc.styles.tableBodyEven = {
+                           alignment: 'left',
+                           margin: [0,10,0,0],
+                           text: 'Borders:1',
+                         }
+                         doc.styles.tableBodyOdd = {
+                           alignment: 'left',
+                           margin: [0,10,0,0],
+                         }
+                        doc.styles['td:nth-child(2)'] = { 
+                           width: '100px',
+                           'max-width': '100px'
+                         }*/
+                       }  
+                },
+            ]
+        }
+         
+        });
+    }
+
+
+
 });

@@ -55,12 +55,12 @@
          $student_data = $wpdb->get_results(' 
          SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
         FROM '. $wpdb->prefix.'users AS stu_profile
-        WHERE stu_profile.status=0 ');   
+        WHERE stu_profile.status=1 ');   
     }else{
         $student_data = $wpdb->get_results(' 
          SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
         FROM '. $wpdb->prefix.'users AS stu_profile
-        WHERE stu_profile.status=0 AND date(stu_profile.created_at) BETWEEN "'.$start_date.'" AND "'.$end_date.'" ');  
+        WHERE stu_profile.status=1 AND date(stu_profile.created_at) BETWEEN "'.$start_date.'" AND "'.$end_date.'" ');  
     }
 
         $return_json = array();
@@ -117,12 +117,12 @@
         $student_data = $wpdb->get_results(' 
          SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
         FROM '. $wpdb->prefix.'users AS stu_profile
-        WHERE stu_profile.status=1 '); 
+        WHERE stu_profile.status=2 '); 
     }else{
         $student_data = $wpdb->get_results(' 
          SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
         FROM '. $wpdb->prefix.'users AS stu_profile
-        WHERE stu_profile.status=1 AND date(stu_profile.created_at) BETWEEN "'.$start_date.'" AND "'.$end_date.'" ');
+        WHERE stu_profile.status=2 AND date(stu_profile.created_at) BETWEEN "'.$start_date.'" AND "'.$end_date.'" ');
     }
 
         $return_json = array();
@@ -322,5 +322,52 @@
             echo json_encode($result);   
         }
     }
+
+
+
+    add_action( 'wp_ajax_all_paid_users', 'all_paid_users' );
+    add_action( 'wp_ajax_nopriv_all_paid_users', 'all_paid_users' );
+
+    function all_paid_users(){
+
+    global $wpdb;
+    $search_action = $_POST['search_action'];
+    $start_date = $_POST['start_date'];
+    $end_date = $_POST['end_date'];
+    
+    
+    if($search_action == 'no'){
+         $student_data = $wpdb->get_results(' 
+         SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
+        FROM '. $wpdb->prefix.'users AS stu_profile
+        WHERE stu_profile.status=3 ');   
+    }else{
+        $student_data = $wpdb->get_results(' 
+         SELECT stu_profile.ID,stu_profile.user_login,stu_profile.display_name
+        FROM '. $wpdb->prefix.'users AS stu_profile
+        WHERE stu_profile.status=3 AND date(stu_profile.created_at) BETWEEN "'.$start_date.'" AND "'.$end_date.'" ');  
+    }
+
+        $return_json = array();
+        $i = 0;
+        foreach ($student_data as $key => $value) { $i++;
+            $return_json[] = array(
+              'srl' => $i,    
+              'index_no' => $value->user_login,
+              'student_name' => $value->display_name,
+              /*'father_name' => $value->father_name,*/
+              // 'category' => $value->parents_category,
+              /*'mother_name' => $value->mother_name,
+              'contact_no' => $value->contact_no,
+              'class' => $value->class,
+              'shift' => $value->shift,*/
+              /*'category' => $value->category,*/
+              'action' => '<a class="single_view" href="'.admin_url("admin.php?page=student-details&id=$value->user_id").'">View</a>',
+            );
+        }
+        $response['data'] = $return_json;
+        wp_send_json($response);
+    }
+
 
  ?>

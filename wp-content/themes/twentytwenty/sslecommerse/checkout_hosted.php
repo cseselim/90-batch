@@ -17,7 +17,7 @@ $post_data = array();
 $post_data['total_amount'] = isset($_POST['total_amount']) ? $_POST['total_amount'] : "John Doe";
 $post_data['user_id'] = isset($_POST['user_id']) ? $_POST['user_id'] : "0";
 $post_data['currency'] = "BDT";
-$post_data['tran_id'] = "sagc-".$post_data['user_id']."-". mt_rand(1001,9999).time();
+$post_data['tran_id'] = "ng90-".$post_data['user_id']."-". mt_rand(1001,9999).time();
 
 # CUSTOMER INFORMATION
 $post_data['cus_name'] = isset($_POST['customer_name']) ? $_POST['customer_name'] : "John Doe";

@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5,h6{
 .school_slider .owl-carousel .owl-item img {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 700px;
 }
 .school_slider{
     position: relative;
@@ -338,4 +338,36 @@ button{
 .modal
 {
     z-index: 999999;
+}
+#time_countdown{
+    color: #fff;
+    padding: 34px 0px;
+}
+.time_countdown span{
+    float: left;
+}
+#days, #hours, #minutes, #seconds{
+    font-size: 74px;
+    font-weight: 200;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+    line-height: 77px;
+    display: inline-block;
+}
+.time_title{
+    font-size: 25px;
+    margin-top: 11px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#wpmpRegisterSection{
+    max-width: 45% !important;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }
